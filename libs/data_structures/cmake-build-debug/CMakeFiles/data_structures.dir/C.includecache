@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/programms/5a/programms/1/libs/algorithms/array/array.h
+stddef.h
+-
+
+C:/programms/5a/programms/1/libs/data_structures/ordered_array/ordered_array_set.c
+ordered_array_set.h
+C:/programms/5a/programms/1/libs/data_structures/ordered_array/ordered_array_set.h
+assert.h
+-
+malloc.h
+-
+stdbool.h
+-
+
+C:/programms/5a/programms/1/libs/data_structures/ordered_array/ordered_array_set.h
+stdint.h
+-
+assert.h
+-
+memory.h
+-
+stdio.h
+-
+stdbool.h
+-
+../../algorithms/array/array.h
+C:/programms/5a/programms/1/libs/algorithms/array/array.h
+
