@@ -753,15 +753,40 @@ bool isMutuallyInverseMatrices(matrix m1, matrix m2) {
     return isEMatrix(m);
 }
 
+// seventh task
+
+int max(int a, int b) {
+    return a > b ? a : b;
+}
+
+long long findSumOfMaxesOfPseudoDiagonal(matrix m) {
+    int n = m.nRows + m.nCols - 2;
+    int maximaOfPseudodiagonals[n];
+    for (size_t i = 0; i < n; i++)
+        maximaOfPseudodiagonals[i] = 0;
+    int indexPdDiagonalElement;
+    for (int i = 0; i < m.nRows; i++)
+        for (int j = 0; j < m.nCols; j++)
+            if (j != i) {
+                if (i > j)
+                    indexPdDiagonalElement = j - i + m.nRows - 1;
+                else if (i < j)
+                    indexPdDiagonalElement = j - i + m.nRows - 2;
+                maximaOfPseudodiagonals[indexPdDiagonalElement] =
+                        max(maximaOfPseudodiagonals[indexPdDiagonalElement], m.values[i][j]);
+            }
+    return getSum_(maximaOfPseudodiagonals, n);
+}
+
 
 
 int main() {
-    matrix m1 = getMemMatrix(2, 2);
-    matrix m2 = getMemMatrix(2, 2);
+    matrix m1 = getMemMatrix(3, 3);
+//    matrix m2 = getMemMatrix(2, 2);
+//    inputMatrix(m1);
     inputMatrix(m1);
-    inputMatrix(m2);
 
-    printf("%d", isMutuallyInverseMatrices(m1, m2));
+    printf("%lld", findSumOfMaxesOfPseudoDiagonal(m1));
 //    transposeIfMatrixHasNotEqualSumOfRows(m);
 //
 //    outputMatrix(m);
