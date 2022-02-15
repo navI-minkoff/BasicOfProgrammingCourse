@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "C:/programms/5a/programms/cource/libs/data_structures/matrix/matrix.c" "C:/programms/5a/programms/cource/cmake-build-debug/libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/matrix/matrix.c.obj"
   "C:/programms/5a/programms/cource/libs/data_structures/unordered_array/unordered_array_set.c" "C:/programms/5a/programms/cource/cmake-build-debug/libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/unordered_array/unordered_array_set.c.obj"
   "C:/programms/5a/programms/cource/libs/algorithms/algorithms.c" "C:/programms/5a/programms/cource/cmake-build-debug/libs/algorithms/CMakeFiles/algorithms.dir/algorithms.c.obj"
   "C:/programms/5a/programms/cource/libs/algorithms/array/array.c" "C:/programms/5a/programms/cource/cmake-build-debug/libs/algorithms/CMakeFiles/algorithms.dir/array/array.c.obj"

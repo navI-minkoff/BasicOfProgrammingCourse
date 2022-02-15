@@ -129,6 +129,30 @@ algorithms/fast:
 	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/build
 .PHONY : algorithms/fast
 
+__/data_structures/matrix/matrix.obj: __/data_structures/matrix/matrix.c.obj
+.PHONY : __/data_structures/matrix/matrix.obj
+
+# target to build an object file
+__/data_structures/matrix/matrix.c.obj:
+	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/matrix/matrix.c.obj
+.PHONY : __/data_structures/matrix/matrix.c.obj
+
+__/data_structures/matrix/matrix.i: __/data_structures/matrix/matrix.c.i
+.PHONY : __/data_structures/matrix/matrix.i
+
+# target to preprocess a source file
+__/data_structures/matrix/matrix.c.i:
+	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/matrix/matrix.c.i
+.PHONY : __/data_structures/matrix/matrix.c.i
+
+__/data_structures/matrix/matrix.s: __/data_structures/matrix/matrix.c.s
+.PHONY : __/data_structures/matrix/matrix.s
+
+# target to generate assembly for a file
+__/data_structures/matrix/matrix.c.s:
+	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/__/data_structures/matrix/matrix.c.s
+.PHONY : __/data_structures/matrix/matrix.c.s
+
 __/data_structures/unordered_array/unordered_array_set.obj: __/data_structures/unordered_array/unordered_array_set.c.obj
 .PHONY : __/data_structures/unordered_array/unordered_array_set.obj
 
@@ -210,6 +234,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... algorithms
+	@echo ... __/data_structures/matrix/matrix.obj
+	@echo ... __/data_structures/matrix/matrix.i
+	@echo ... __/data_structures/matrix/matrix.s
 	@echo ... __/data_structures/unordered_array/unordered_array_set.obj
 	@echo ... __/data_structures/unordered_array/unordered_array_set.i
 	@echo ... __/data_structures/unordered_array/unordered_array_set.s

@@ -127,8 +127,8 @@ libs/data_structures/clean: libs/data_structures/CMakeFiles/data_structures.dir/
 # Target rules for target CMakeFiles/1.dir
 
 # All Build rule for target.
-CMakeFiles/1.dir/all: libs/algorithms/CMakeFiles/algorithms.dir/all
 CMakeFiles/1.dir/all: libs/data_structures/CMakeFiles/data_structures.dir/all
+CMakeFiles/1.dir/all: libs/algorithms/CMakeFiles/algorithms.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make CMakeFiles/1.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\1.dir\build.make CMakeFiles/1.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\programms\5a\programms\cource\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target 1"
@@ -136,7 +136,7 @@ CMakeFiles/1.dir/all: libs/data_structures/CMakeFiles/data_structures.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\programms\5a\programms\cource\cmake-build-debug\CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\programms\5a\programms\cource\cmake-build-debug\CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/1.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\programms\5a\programms\cource\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/1.dir/rule
@@ -154,15 +154,15 @@ CMakeFiles/1.dir/clean:
 # Target rules for target libs/data_structures/CMakeFiles/data_structures.dir
 
 # All Build rule for target.
-libs/data_structures/CMakeFiles/data_structures.dir/all:
+libs/data_structures/CMakeFiles/data_structures.dir/all: libs/algorithms/CMakeFiles/algorithms.dir/all
 	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/depend
 	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\programms\5a\programms\cource\cmake-build-debug\CMakeFiles --progress-num=7,8,9 "Built target data_structures"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\programms\5a\programms\cource\cmake-build-debug\CMakeFiles --progress-num=8,9,10,11 "Built target data_structures"
 .PHONY : libs/data_structures/CMakeFiles/data_structures.dir/all
 
 # Build rule for subdir invocation for target.
 libs/data_structures/CMakeFiles/data_structures.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\programms\5a\programms\cource\cmake-build-debug\CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\programms\5a\programms\cource\cmake-build-debug\CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 libs/data_structures/CMakeFiles/data_structures.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\programms\5a\programms\cource\cmake-build-debug\CMakeFiles 0
 .PHONY : libs/data_structures/CMakeFiles/data_structures.dir/rule
@@ -183,12 +183,12 @@ libs/data_structures/CMakeFiles/data_structures.dir/clean:
 libs/algorithms/CMakeFiles/algorithms.dir/all:
 	$(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/depend
 	$(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\programms\5a\programms\cource\cmake-build-debug\CMakeFiles --progress-num=3,4,5,6 "Built target algorithms"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\programms\5a\programms\cource\cmake-build-debug\CMakeFiles --progress-num=3,4,5,6,7 "Built target algorithms"
 .PHONY : libs/algorithms/CMakeFiles/algorithms.dir/all
 
 # Build rule for subdir invocation for target.
 libs/algorithms/CMakeFiles/algorithms.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\programms\5a\programms\cource\cmake-build-debug\CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\programms\5a\programms\cource\cmake-build-debug\CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 libs/algorithms/CMakeFiles/algorithms.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\programms\5a\programms\cource\cmake-build-debug\CMakeFiles 0
 .PHONY : libs/algorithms/CMakeFiles/algorithms.dir/rule

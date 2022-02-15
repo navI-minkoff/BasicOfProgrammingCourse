@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "C:/programms/5a/programms/cource/libs/data_structures/bitset/bitset.c" "C:/programms/5a/programms/cource/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/bitset/bitset.c.obj"
+  "C:/programms/5a/programms/cource/libs/data_structures/matrix/matrix.c" "C:/programms/5a/programms/cource/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/matrix/matrix.c.obj"
   "C:/programms/5a/programms/cource/libs/data_structures/ordered_array/ordered_array_set.c" "C:/programms/5a/programms/cource/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/ordered_array/ordered_array_set.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
@@ -23,6 +24,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "C:/programms/5a/programms/cource/cmake-build-debug/libs/algorithms/CMakeFiles/algorithms.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

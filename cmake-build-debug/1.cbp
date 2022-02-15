@@ -164,6 +164,14 @@
 		<Unit filename="C:/programms/5a/programms/cource/libs/data_structures/bitset/bitset.h">
 			<Option target="data_structures"/>
 		</Unit>
+		<Unit filename="C:/programms/5a/programms/cource/libs/data_structures/matrix/matrix.c">
+			<Option target="data_structures"/>
+			<Option target="algorithms"/>
+		</Unit>
+		<Unit filename="C:/programms/5a/programms/cource/libs/data_structures/matrix/matrix.h">
+			<Option target="data_structures"/>
+			<Option target="algorithms"/>
+		</Unit>
 		<Unit filename="C:/programms/5a/programms/cource/libs/data_structures/ordered_array/ordered_array_set.c">
 			<Option target="data_structures"/>
 		</Unit>

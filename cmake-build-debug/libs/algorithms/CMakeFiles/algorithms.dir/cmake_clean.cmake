@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/algorithms.dir/__/data_structures/matrix/matrix.c.obj"
   "CMakeFiles/algorithms.dir/__/data_structures/unordered_array/unordered_array_set.c.obj"
   "CMakeFiles/algorithms.dir/algorithms.c.obj"
   "CMakeFiles/algorithms.dir/array/array.c.obj"
