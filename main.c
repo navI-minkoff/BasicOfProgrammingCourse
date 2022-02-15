@@ -721,14 +721,37 @@ void getSquareOfMatrixIfSymmetric(matrix *m) {
     }
 }
 
-//
+// fifth task
+
+bool isUnique(long long *a, int n) {
+    for (size_t i = 0; i < n - 1; i++)
+        for (size_t j = i + 1; j < n; j++)
+            if (a[i] == a[j])
+                return false;
+    return true;
+}
+
+long long getSum_(int *a, int n) {
+    long long s = a[0];
+    for (int i = 1; i < n; i++)
+        s += a[i];
+    return s;
+}
+
+void transposeIfMatrixHasNotEqualSumOfRows(matrix m) {
+    long long sumRowsMatrix[m.nCols];
+    for (size_t i = 0; i < m.nCols; i++)
+        sumRowsMatrix[i] = getSum_(m.values[i], m.nCols);
+    if (isUnique(sumRowsMatrix, m.nCols))
+        transposeSquareMatrix(&m);
+}
 
 int main() {
     matrix m = getMemMatrix(3, 3);
 
     inputMatrix(m);
 
-    getSquareOfMatrixIfSymmetric(&m);
+    transposeIfMatrixHasNotEqualSumOfRows(m);
 
     outputMatrix(m);
 
