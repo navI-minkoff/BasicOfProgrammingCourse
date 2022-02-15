@@ -778,15 +778,35 @@ long long findSumOfMaxesOfPseudoDiagonal(matrix m) {
     return getSum_(maximaOfPseudodiagonals, n);
 }
 
+// eighth task
+
+int getMinInArea(matrix m) {
+    position posMax = getMaxValuePos(m);
+    int min = m.values[posMax.rowIndex][posMax.colIndex];
+    int rBorder = posMax.colIndex;
+    int lBorder = posMax.colIndex;
+    int potentialMin;
+    for (int i = posMax.rowIndex - 1; i >= 0; i--) {
+        if (rBorder != m.nCols - 1)
+            rBorder++;
+        if (lBorder != 0)
+            lBorder--;
+        potentialMin = getMin(&m.values[i][lBorder], rBorder - lBorder);
+        if (potentialMin < min)
+            min = potentialMin;
+    }
+    return min;
+}
+
 
 
 int main() {
-    matrix m1 = getMemMatrix(3, 3);
+    matrix m1 = getMemMatrix(3, 4);
 //    matrix m2 = getMemMatrix(2, 2);
 //    inputMatrix(m1);
     inputMatrix(m1);
 
-    printf("%lld", findSumOfMaxesOfPseudoDiagonal(m1));
+    printf("%d", getMinInArea(m1));
 //    transposeIfMatrixHasNotEqualSumOfRows(m);
 //
 //    outputMatrix(m);
