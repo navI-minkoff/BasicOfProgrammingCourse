@@ -671,12 +671,27 @@ void swapColsWithMaxAndMinSquareMatrix(matrix m) {
 }
 
 // second task
+
+int getMax(const int *a, int n) {
+    int max = a[0];
+    for (size_t i = 1; i < n; i++)
+        if (a[i] > max)
+            max = a[i];
+    return max;
+}
+
+void sortRowsByMinElement(matrix m) {
+    insertionSortRowsMatrixByRowCriteria(m, getSum);
+}
+
+// third task
+
 int main() {
     matrix m = getMemMatrix(3, 3);
 
     inputMatrix(m);
 
-    swapColsWithMaxAndMinSquareMatrix(m);
+    sortRowsByMinElement(m);
 
     outputMatrix(m);
 
