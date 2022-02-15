@@ -626,14 +626,14 @@ void test_createMatrixFromArray() {
 // createArrayOfMatrixFromArray
 void test_createArrayOfMatrixFromArray_zeroRowsAndCols() {
     matrix *ms = createArrayOfMatrixFromArray((int[]) {}, 3, 0, 0);
-    for(size_t i = 0; i < 3; i++)
+    for (size_t i = 0; i < 3; i++)
         assert(ms[i].nRows == 0 && ms[i].nCols == 0);
     freeMemMatrices(ms, 3);
 }
 
 void test_createArrayOfMatrixFromArray_manyRowsAndCols() {
     matrix *ms = createArrayOfMatrixFromArray((int[]) {}, 3, 2, 2);
-    for(size_t i = 0; i < 3; i++)
+    for (size_t i = 0; i < 3; i++)
         assert(ms[i].nRows == 2 && ms[i].nCols == 2);
     freeMemMatrices(ms, 3);
 }
@@ -700,15 +700,47 @@ void sortColsByMinElement(matrix m) {
 
 // fourth task
 
+matrix mulMatrices(matrix m1, matrix m2) {
+    if (m1.nCols != m2.nRows) {
+        fprintf(stderr, "unsuitable matrices");
+        exit(1);
+    }
+    matrix m = getMemMatrix(m1.nRows, m2.nCols);
+    for (size_t i = 0; i < m.nRows; i++)
+        for (size_t j = 0; j < m.nCols; j++) {
+            m.values[i][j] = 0;
+            for (size_t k = 0; k < m1.nCols; k++)
+                m.values[i][j] += m1.values[i][k] * m2.values[k][j];
+        }
+    return m;
+}
+
+void getSquareOfMatrixIfSymmetric(matrix *m) {
+    if (isSymmetricMatrix(*m)) {
+        *m = mulMatrices(*m, *m);
+    }
+}
+
+//
 
 int main() {
-    matrix m = getMemMatrix(3, 6);
+    matrix m = getMemMatrix(3, 3);
 
     inputMatrix(m);
 
-    sortColsByMinElement(m);
+    getSquareOfMatrixIfSymmetric(&m);
 
     outputMatrix(m);
+
+//    matrix m1 = getMemMatrix(2, 2);
+//    matrix m2 = getMemMatrix(2, 2);
+//    inputMatrix(m1);
+//    inputMatrix(m2);
+//
+//    matrix m3 = mulMatrices(m1, m2);
+//
+//    outputMatrix(m3);
+//
 
 //    test();
 

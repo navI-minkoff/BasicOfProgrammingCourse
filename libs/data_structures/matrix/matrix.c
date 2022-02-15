@@ -99,7 +99,7 @@ void insertionSortColsMatrixByColCriteria(matrix m,
                                           int (*criteria)(int *, int)) {
     int auxiliaryArray[m.nCols];
     int copyCol[m.nRows];
-    for (int i = 0; i < m.nCols; ++i) {
+    for (int i = 0; i < m.nCols; i++) {
         copyColMatrix(m, i, copyCol);
         auxiliaryArray[i] = criteria(copyCol, m.nRows);
     }
