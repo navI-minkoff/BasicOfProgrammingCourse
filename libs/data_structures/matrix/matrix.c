@@ -91,7 +91,7 @@ void insertionSortRowsMatrixByRowCriteria(matrix m,
 }
 
 void copyColMatrix(matrix m, int col, int *a) {
-    for(size_t i = 0; i < m.nRows; i++)
+    for (size_t i = 0; i < m.nRows; i++)
         a[i] = m.values[i][col];
 }
 
@@ -148,16 +148,15 @@ bool isSymmetricMatrix(matrix m) {
 
 void transposeSquareMatrix(matrix *m) {
     size_t nRows = 0;
-    for (size_t j = 0; j < m->nCols; j++) {
+    for (size_t j = 0; j < m->nCols; j++, nRows++) {
         for (size_t i = nRows; i < m->nRows; i++)
             if (i != j)
                 swap(&m->values[i][j], &m->values[j][i]);
-        nRows++;
     }
 }
 
 position getMinValuePos(matrix m) {
-    position p = {0,0};
+    position p = {0, 0};
     for (int i = 0; i < m.nRows; i++)
         for (int j = 0; j < m.nCols; j++)
             if (m.values[i][j] < m.values[p.rowIndex][p.colIndex]) {
@@ -169,7 +168,7 @@ position getMinValuePos(matrix m) {
 }
 
 position getMaxValuePos(matrix m) {
-    position p = {0,0};
+    position p = {0, 0};
     for (int i = 0; i < m.nRows; i++)
         for (int j = 0; j < m.nCols; j++)
             if (m.values[i][j] > m.values[p.rowIndex][p.colIndex]) {
