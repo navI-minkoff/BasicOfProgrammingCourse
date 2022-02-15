@@ -661,16 +661,26 @@ void test() {
     test_createArrayOfMatrixFromArray();
 }
 
+
+// first task
+
+void swapColsWithMaxAndMinSquareMatrix(matrix m) {
+    position maxPos = getMaxValuePos(m);
+    position minPos = getMinValuePos(m);
+    swapColumns(m, maxPos.colIndex, minPos.colIndex);
+}
+
+// second task
 int main() {
-//    matrix m = getMemMatrix(3, 3);
-//
-//    inputMatrix(m);
-//
-//    insertionSortColsMatrixByColCriteria(m, getSum);
-//
-//    outputMatrix(m);
-//
-    test();
+    matrix m = getMemMatrix(3, 3);
+
+    inputMatrix(m);
+
+    swapColsWithMaxAndMinSquareMatrix(m);
+
+    outputMatrix(m);
+
+//    test();
 
     return 0;
 }
