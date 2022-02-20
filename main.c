@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 #include "libs/data_structures/bitset/bitset.h"
 #include "libs/data_structures/unordered_array/unordered_array_set.h"
 #include "libs/data_structures/ordered_array/ordered_array_set.h"
@@ -10,6 +11,12 @@ int getSum(int *a, int n) {
     for (int i = 1; i < n; i++)
         s += a[i];
     return s;
+}
+
+void outputArray__(const long long *const a, const size_t n) {
+    for (size_t i = 0; i < n; i++)
+        printf("%d ", a[i]);
+    printf("\n");
 }
 
 // getMemMatrix
@@ -807,9 +814,11 @@ void insertionSortRowsMatrixByRowCriteriaF(matrix m,
     float auxiliaryArray[m.nRows];
     for (size_t i = 0; i < m.nRows; i++)
         auxiliaryArray[i] = criteria(m.values[i], m.nCols);
+
     for (int i = 1; i < m.nRows; i++) {
         float t = auxiliaryArray[i];
         int j = i;
+
         while (j > 0 && auxiliaryArray[j - 1] > t) {
             auxiliaryArray[j] = auxiliaryArray[j - 1];
             swapRows(m, j, j - 1);
@@ -822,6 +831,42 @@ void insertionSortRowsMatrixByRowCriteriaF(matrix m,
 void sortByDistances(matrix m) {
     insertionSortRowsMatrixByRowCriteriaF(m, getDistance);
 }
+
+// tenth task
+
+int cmp_long_long(const void *pa, const void *pb) {
+    long long arg1 = *(const long long *) pa;
+    long long arg2 = *(const long long *) pb;
+    if (arg1 < arg2) return -1;
+    if (arg1 > arg2) return 1;
+    return 0;
+}
+
+int countNUnique(long long *a, int n) {
+    qsort(a, n, sizeof(long long), cmp_long_long);
+
+    int countUnique = 1;
+    for (size_t i = 0; i < n - 1; i++)
+        if (a[i] != a[i + 1])
+            countUnique++;
+
+    return countUnique;
+}
+
+int countEqClassesByRowsSum(matrix m) {
+    long long sumStockArray[m.nRows];
+    for (size_t i = 0; i < m.nRows; i++) {
+        long long sumStock = 0;
+        for (size_t j = 0; j < m.nCols; j++)
+            sumStock += m.values[i][j];
+        sumStockArray[i] = sumStock;
+    }
+
+    return countNUnique(sumStockArray, m.nRows);
+}
+
+
+
 
 // TEST FOR THE FIRS EIGHT TASKS
 
@@ -1267,10 +1312,11 @@ int main() {
 //    test();
 //    test_tasks();
 
-    matrix m = getMemMatrix(5, 2);
+    matrix m = getMemMatrix(6, 2);
     inputMatrix(m);
 
-    sortByDistances(m);
-    outputMatrix(m);
+    printf("%d", countEqClassesByRowsSum(m));
+//    sortByDistances(m);
+//    outputMatrix(m);
     return 0;
 }
