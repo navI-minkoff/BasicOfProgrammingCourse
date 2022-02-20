@@ -865,8 +865,24 @@ int countEqClassesByRowsSum(matrix m) {
     return countNUnique(sumStockArray, m.nRows);
 }
 
+// eleventh task
 
+int getNSpecialElement(matrix m) {
+    int countSpecialElement = 0;
+    for (size_t j = 0; j < m.nCols; j++) {
+        long long sumCol = 0;
+        int maxElement = m.values[0][j];
+        for (size_t i = 0; i < m.nRows; i++) {
+            if (m.values[i][j] > maxElement)
+                maxElement = m.values[i][j];
+            sumCol += m.values[i][j];
+        }
+        if (sumCol - maxElement < maxElement)
+            countSpecialElement++;
+    }
 
+    return countSpecialElement;
+}
 
 // TEST FOR THE FIRS EIGHT TASKS
 
@@ -1312,10 +1328,10 @@ int main() {
 //    test();
 //    test_tasks();
 
-    matrix m = getMemMatrix(6, 2);
+    matrix m = getMemMatrix(3, 4);
     inputMatrix(m);
 
-    printf("%d", countEqClassesByRowsSum(m));
+    printf("%d", getNSpecialElement(m));
 //    sortByDistances(m);
 //    outputMatrix(m);
     return 0;
