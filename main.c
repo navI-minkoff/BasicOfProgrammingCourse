@@ -900,6 +900,31 @@ void swapPenultimateRow(matrix m) {
     m.values[m.nRows - 2][m.nCols - 2] = firsRowElement;
 }
 
+// thirteenth task
+
+bool isNonDescendingSorted(const int *a, int n) {
+    for (size_t i = 1; i < n; i++)
+        if (a[i] < a[i - 1])
+            return false;
+
+    return true;
+}
+
+bool hasAllNonDescendingRows(matrix m) {
+    for (size_t i = 0; i < m.nRows; i++)
+        if (!isNonDescendingSorted(m.values[i], m.nCols))
+            return false;
+
+    return true;
+}
+
+int countNonDescendingRowsMatrices(matrix *ms, int nMatrix) {
+    int countNonDescendingMatrices = 0;
+    for (size_t i = 0; i < nMatrix; i++)
+        countNonDescendingMatrices += hasAllNonDescendingRows(ms[i]);
+
+    return countNonDescendingMatrices;
+}
 // TEST FOR THE FIRS EIGHT TASKS
 
 // 1
@@ -1344,11 +1369,20 @@ int main() {
 //    test();
 //    test_tasks();
 
-    matrix m = getMemMatrix(4, 4);
-    inputMatrix(m);
+    matrix *ms = createArrayOfMatrixFromArray(
+            (int[]) {
+                    0, 0, 1,
 
-//    printf("%d", getNSpecialElement(m));
-    swapPenultimateRow(m);
-    outputMatrix(m);
+                    1, 6, 7,
+
+                    -1, 0, 1,
+
+                    1, 2, 3,
+            },
+            4, 1, 3);
+
+    printf("%d", countNonDescendingRowsMatrices(ms, 4));
+//    swapPenultimateRow(m);
+//    outputMatrix(m);
     return 0;
 }
