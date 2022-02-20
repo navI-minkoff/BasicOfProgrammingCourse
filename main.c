@@ -884,6 +884,22 @@ int getNSpecialElement(matrix m) {
     return countSpecialElement;
 }
 
+// twelfth task
+
+void swapPenultimateRow(matrix m) {
+    if (m.nRows < 2) {
+        fprintf(stderr, "few rows\n");
+        exit(3);
+    }
+
+    position posMin = getMinValuePos(m);
+    int firsRowElement = m.values[m.nRows - 2][posMin.colIndex];
+    for (size_t i = 0; i < m.nRows; i++)
+        m.values[m.nRows - 2][i] = m.values[i][posMin.colIndex];
+
+    m.values[m.nRows - 2][m.nCols - 2] = firsRowElement;
+}
+
 // TEST FOR THE FIRS EIGHT TASKS
 
 // 1
@@ -1328,11 +1344,11 @@ int main() {
 //    test();
 //    test_tasks();
 
-    matrix m = getMemMatrix(3, 4);
+    matrix m = getMemMatrix(4, 4);
     inputMatrix(m);
 
-    printf("%d", getNSpecialElement(m));
-//    sortByDistances(m);
-//    outputMatrix(m);
+//    printf("%d", getNSpecialElement(m));
+    swapPenultimateRow(m);
+    outputMatrix(m);
     return 0;
 }
