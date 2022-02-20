@@ -104,4 +104,5 @@ matrix createMatrixFromArray(const int *a, int nRows,
 // nMatrices матриц, построенных из элементов массива a
 matrix *createArrayOfMatrixFromArray(const int *values,
                                      int nMatrices, int nRows, int nCols);
+
 #endif

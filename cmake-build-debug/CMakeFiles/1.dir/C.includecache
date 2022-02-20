@@ -57,6 +57,8 @@ C:/programms/5a/programms/cource/libs/algorithms/array/array.h
 C:/programms/5a/programms/cource/main.c
 stdio.h
 -
+math.h
+-
 libs/data_structures/bitset/bitset.h
 C:/programms/5a/programms/cource/libs/data_structures/bitset/bitset.h
 libs/data_structures/unordered_array/unordered_array_set.h

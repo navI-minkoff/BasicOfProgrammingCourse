@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 #include "libs/data_structures/bitset/bitset.h"
 #include "libs/data_structures/unordered_array/unordered_array_set.h"
 #include "libs/data_structures/ordered_array/ordered_array_set.h"
@@ -792,6 +793,36 @@ int getMinInArea(matrix m) {
     return min;
 }
 
+// ninth task
+
+float getDistance(int *a, int n) {
+    double sum = 0;
+    for (size_t i = 0; i < n; i++)
+        sum += pow(a[i], 2);
+    return sqrt(sum);
+}
+
+void insertionSortRowsMatrixByRowCriteriaF(matrix m,
+                                           float (*criteria)(int *, int)) {
+    float auxiliaryArray[m.nRows];
+    for (size_t i = 0; i < m.nRows; i++)
+        auxiliaryArray[i] = criteria(m.values[i], m.nCols);
+    for (int i = 1; i < m.nRows; i++) {
+        float t = auxiliaryArray[i];
+        int j = i;
+        while (j > 0 && auxiliaryArray[j - 1] > t) {
+            auxiliaryArray[j] = auxiliaryArray[j - 1];
+            swapRows(m, j, j - 1);
+            j--;
+        }
+        auxiliaryArray[j] = t;
+    }
+}
+
+void sortByDistances(matrix m) {
+    insertionSortRowsMatrixByRowCriteriaF(m, getDistance);
+}
+
 // TEST FOR THE FIRS EIGHT TASKS
 
 // 1
@@ -986,7 +1017,7 @@ void test_getSquareOfMatrixIfSymmetric_symmetric() {
                                       3, 3);
     matrix m2 = createMatrixFromArray((int[]) {
                                               14, 10, 10,
-                                              10, 9,  10,
+                                              10, 9, 10,
                                               10, 10, 14
                                       },
                                       3, 3);
@@ -1108,8 +1139,8 @@ void test_isMutuallyInverseMatrices() {
 
 void test_findSumOfMaxesOfPseudoDiagonal_oneElement() {
     matrix m = createMatrixFromArray((int[]) {
-                                              1
-                                      },
+                                             1
+                                     },
                                      1, 1);
     assert(findSumOfMaxesOfPseudoDiagonal(m) == 0);
     freeMemMatrix(&m);
@@ -1158,8 +1189,8 @@ void test_findSumOfMaxesOfPseudoDiagonal() {
 void test_getMinInArea_maxInFirstRow() {
     matrix m = createMatrixFromArray((int[]) {
                                              3, 12, 5, 4,
-                                             1, 3,  6, 3,
-                                             3, 2,  1, 2
+                                             1, 3, 6, 3,
+                                             3, 2, 1, 2
                                      },
                                      3, 4);
     assert(getMinInArea(m) == 12);
@@ -1177,8 +1208,8 @@ void test_getMinInArea_oneElement() {
 
 void test_getMinInArea_maxLeft() {
     matrix m = createMatrixFromArray((int[]) {
-                                             3,  4, 5, 4,
-                                             1,  3, 6, 3,
+                                             3, 4, 5, 4,
+                                             1, 3, 6, 3,
                                              12, 2, 1, 2
                                      },
                                      3, 4);
@@ -1199,8 +1230,8 @@ void test_getMinInArea_maxRight() {
 
 void test_getMinInArea_maxInCenter() {
     matrix m = createMatrixFromArray((int[]) {
-                                             3, 4, 5, 4,  1,
-                                             1, 3, 6, 3,  3,
+                                             3, 4, 5, 4, 1,
+                                             1, 3, 6, 3, 3,
                                              7, 2, 12, 6, 4,
                                              4, 1, 11, 8, 1
                                      },
@@ -1218,6 +1249,7 @@ void test_getMinInArea() {
 
 
 }
+
 void test_tasks() {
     test_swapColsWithMaxAndMinSquareMatrix();
     test_sortRowsByMinElement();
@@ -1232,8 +1264,13 @@ void test_tasks() {
 
 int main() {
 
-    test();
-    test_tasks();
+//    test();
+//    test_tasks();
 
+    matrix m = getMemMatrix(5, 2);
+    inputMatrix(m);
+
+    sortByDistances(m);
+    outputMatrix(m);
     return 0;
 }
