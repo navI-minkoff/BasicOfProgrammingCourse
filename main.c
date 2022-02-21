@@ -1012,6 +1012,59 @@ int getNSpecialElement2(matrix m) {
     return countSpecialElement;
 }
 
+// seventeenth task
+
+double getScalarProduct(const int *a, const int *b, int n) {
+    double scalarProduct = 0;
+    for (size_t i = 0; i < n; i++)
+        scalarProduct += a[i] * b[i];
+
+    return scalarProduct;
+}
+
+double getVectorLength(const int *a, int n) {
+    double vectorLength = 0;
+    for (size_t i = 0; i < n; i++)
+        vectorLength += pow(a[i], 2);
+
+    return sqrt(vectorLength);
+}
+
+double getCosine(int *a, int *b, int n) {
+    double lengthVectorA = getVectorLength(a, n);
+    double lengthVectorB = getVectorLength(b, n);
+
+    if (fabs(lengthVectorA) < DBL_EPSILON ||
+        fabs(lengthVectorB) < DBL_EPSILON) {
+        fprintf(stderr, "null vector");
+        exit(3);
+    }
+
+    return getScalarProduct(a, b, n) / (lengthVectorA * lengthVectorB);
+}
+
+int getVectorIndexWithMaxAngle(matrix m, int *b) {
+    double minPosAngle = 2;
+    double minNegAngle = 0;
+    int vectorIndexWithMaxPosAngle = 0;
+    int vectorIndexWithMinNegAngle = 0;
+    for (int i = 0; i < m.nRows; i++) {
+        double potentialMaxAngle = getCosine(m.values[i], b, m.nCols);
+        if (potentialMaxAngle > 0 &&
+            potentialMaxAngle < minPosAngle) {
+            minPosAngle = potentialMaxAngle;
+            vectorIndexWithMaxPosAngle = i;
+        } else if (potentialMaxAngle < 0 &&
+                   potentialMaxAngle < minNegAngle) {
+            minNegAngle = potentialMaxAngle;
+            vectorIndexWithMinNegAngle = i;
+        }
+    }
+
+    return minNegAngle < 0 ? vectorIndexWithMinNegAngle :
+                             vectorIndexWithMaxPosAngle;
+}
+
 // TEST FOR TASKS
 
 // 1
@@ -1451,6 +1504,9 @@ void test_tasks() {
 
 }
 
+
+
+
 int main() {
 
 //    test();
@@ -1475,11 +1531,12 @@ int main() {
 //    printMatrixWithMaxRate(ms, 3);
 //    swapPenultimateRow(m);
 //    outputMatrix(m);
-    matrix m = createMatrixFromArray((int[]) {
-            2, 3, 5, 5, 6,
-            6, 2, 3, 8, 12,
-            12, 12, 2, 1, 2
-    }, 3, 5);
-    printf("%d", getNSpecialElement2(m));
+//    matrix m = createMatrixFromArray((int[]) {
+//            2, 3, 5, 5, 6,
+//            6, 2, 3, 8, 12,
+//            12, 12, 2, 1, 2
+//    }, 3, 5);
+//    printf("%d", getNSpecialElement2(m));
+
     return 0;
 }
