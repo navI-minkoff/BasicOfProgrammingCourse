@@ -123,4 +123,6 @@ matrixf createMatrixFromArrayF(const double *a,
 
 matrixf *createArrayOfMatrixFromArrayF(const double *values,
                                        int nMatrices, int nRows, int nCols);
+
+void freeMemMatrixF(matrixf *m);
 #endif

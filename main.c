@@ -16,7 +16,7 @@ int getSum(int *a, int n) {
 
 void outputArray__(const long long *const a, const size_t n) {
     for (size_t i = 0; i < n; i++)
-        printf("%d ", a[i]);
+        printf("%lld ", a[i]);
     printf("\n");
 }
 
@@ -1510,6 +1510,707 @@ void test_getMinInArea() {
 
 }
 
+// 9
+
+void test_sortByDistances_manyPoints1() {
+    matrix m1 = createMatrixFromArray((int[]) {
+                                             5, 6, 7, 8,
+                                             1, 2, 3, 4,
+                                             9, 10, 11, 12
+                                     },
+                                     3, 4);
+
+    matrix m2 = createMatrixFromArray((int[]) {
+                                              1, 2, 3, 4,
+                                              5, 6, 7, 8,
+                                              9, 10, 11, 12
+                                      },
+                                      3, 4);
+
+    sortByDistances(m1);
+    assert(areTwoMatricesEqual(m1, m2));
+
+    freeMemMatrix(&m1);
+    freeMemMatrix(&m2);
+}
+
+void test_sortByDistances_manyPoints2() {
+    matrix m1 = createMatrixFromArray((int[]) {
+                                              3, 4, 5, 4,
+                                              1, 3, 6, 3,
+                                              7, 2, 1, 12
+                                      },
+                                      3, 4);
+
+    matrix m2 = createMatrixFromArray((int[]) {
+                                              1, 3, 6, 3,
+                                              3, 4, 5, 4,
+                                              7, 2, 1, 12
+                                      },
+                                      3, 4);
+
+    sortByDistances(m1);
+    assert(areTwoMatricesEqual(m1, m2));
+
+    freeMemMatrix(&m1);
+    freeMemMatrix(&m2);
+}
+
+void test_sortByDistances_oneRow() {
+    matrix m1 = createMatrixFromArray((int[]) {
+                                              3, 4, 5, 4,
+                                      },
+                                      1, 4);
+
+    matrix m2 = createMatrixFromArray((int[]) {
+                                              3, 4, 5, 4,
+                                      },
+                                      1, 4);
+
+    sortByDistances(m1);
+    assert(areTwoMatricesEqual(m1, m2));
+
+    freeMemMatrix(&m1);
+    freeMemMatrix(&m2);
+}
+
+void test_sortByDistances_oneCol() {
+    matrix m1 = createMatrixFromArray((int[]) {
+                                              3,
+                                              1,
+                                              7
+                                      },
+                                      3, 1);
+
+    matrix m2 = createMatrixFromArray((int[]) {
+                                              1,
+                                              3,
+                                              7
+                                      },
+                                      3, 1);
+
+    sortByDistances(m1);
+    assert(areTwoMatricesEqual(m1, m2));
+
+    freeMemMatrix(&m1);
+    freeMemMatrix(&m2);
+}
+
+void test_sortByDistances_oneElem() {
+    matrix m1 = createMatrixFromArray((int[]) {
+                                              42
+                                      },
+                                      1, 1);
+
+    matrix m2 = createMatrixFromArray((int[]) {
+                                              42
+                                      },
+                                      1, 1);
+
+    sortByDistances(m1);
+    assert(areTwoMatricesEqual(m1, m2));
+
+    freeMemMatrix(&m1);
+    freeMemMatrix(&m2);
+}
+
+void test_sortByDistances() {
+    test_sortByDistances_manyPoints1();
+    test_sortByDistances_manyPoints2();
+    test_sortByDistances_oneRow();
+    test_sortByDistances_oneCol();
+    test_sortByDistances_oneElem();
+}
+
+// 10
+
+void test_countEqClassesByRowsSum_manyPoints1() {
+    matrix m = createMatrixFromArray((int[]) {
+                                              1, 2, 3, 4,
+                                              4, 3, 2, 1,
+                                              9, 10, 11, 12
+                                      },
+                                      3, 4);
+    assert(countEqClassesByRowsSum(m) == 2);
+
+    freeMemMatrix(&m);
+}
+
+void test_countEqClassesByRowsSum_manyPoints2() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             1, 2, 3, 4,
+                                             4, 3, 2, 1,
+                                             1, 4, 2, 3
+                                     },
+                                     3, 4);
+    assert(countEqClassesByRowsSum(m) == 1);
+
+    freeMemMatrix(&m);
+}
+
+void test_countEqClassesByRowsSum_oneRow() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             1, 2, 3, 4,
+                                     },
+                                     1, 4);
+    assert(countEqClassesByRowsSum(m) == 1);
+
+    freeMemMatrix(&m);
+}
+
+void test_countEqClassesByRowsSum_oneCol() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             1,
+                                             2,
+                                             3
+                                     },
+                                     3, 1);
+    assert(countEqClassesByRowsSum(m) == 3);
+
+    freeMemMatrix(&m);
+}
+
+void test_countEqClassesByRowsSum_oneElem() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             42
+                                     },
+                                     1, 1);
+    assert(countEqClassesByRowsSum(m) == 1);
+
+    freeMemMatrix(&m);
+}
+
+void test_countEqClassesByRowsSum() {
+    test_countEqClassesByRowsSum_manyPoints1();
+    test_countEqClassesByRowsSum_manyPoints2();
+    test_countEqClassesByRowsSum_oneRow();
+    test_countEqClassesByRowsSum_oneCol();
+    test_countEqClassesByRowsSum_oneElem();
+}
+
+// 11
+
+void test_getNSpecialElement_manyPoints1() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             1, 2, 3, 4,
+                                             4, 3, 2, 1,
+                                             9, 10, 11, 12
+                                     },
+                                     3, 4);
+    assert(getNSpecialElement(m) == 4);
+
+    freeMemMatrix(&m);
+}
+
+void test_getNSpecialElement_manyPoints2() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             1, 2, 3, 4,
+                                             1, 2, 2, 1,
+                                             1, 2, 8, 3
+                                     },
+                                     3, 4);
+    assert(getNSpecialElement(m) == 1);
+
+    freeMemMatrix(&m);
+}
+
+void test_getNSpecialElement_oneRow() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             1, 2, 3, 4,
+                                     },
+                                     1, 4);
+    assert(getNSpecialElement(m) == 4);
+
+    freeMemMatrix(&m);
+}
+
+void test_getNSpecialElement_oneCol() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             1,
+                                             2,
+                                             3
+                                     },
+                                     3, 1);
+    assert(getNSpecialElement(m) == 0);
+
+    freeMemMatrix(&m);
+}
+
+void test_getNSpecialElement_oneElem() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             42
+                                     },
+                                     1, 1);
+    assert(getNSpecialElement(m) == 1);
+
+    freeMemMatrix(&m);
+}
+
+void test_getNSpecialElement() {
+    test_getNSpecialElement_manyPoints1();
+    test_getNSpecialElement_manyPoints2();
+    test_getNSpecialElement_oneRow();
+    test_getNSpecialElement_oneCol();
+    test_getNSpecialElement_oneElem();
+}
+
+// 12
+
+void test_swapPenultimateRow_manyPoints1() {
+    matrix m1 = createMatrixFromArray((int[]) {
+                                              1, 2, 3,
+                                              4, 5, 6,
+                                              7, 8, 1
+                                      },
+                                      3, 3);
+
+    matrix m2 = createMatrixFromArray((int[]) {
+                                              1, 2, 3,
+                                              1, 4, 7,
+                                              7, 8, 1
+                                      },
+                                      3, 3);
+
+    swapPenultimateRow(m1);
+    assert(areTwoMatricesEqual(m1, m2));
+
+    freeMemMatrix(&m1);
+    freeMemMatrix(&m2);
+}
+
+void test_swapPenultimateRow_manyPoints2() {
+    matrix m1 = createMatrixFromArray((int[]) {
+                                              4, 1, 3,
+                                              2, 4, 7,
+                                              7, 8, 1
+                                      },
+                                      3, 3);
+
+    matrix m2 = createMatrixFromArray((int[]) {
+                                              4, 1, 3,
+                                              1, 4, 8,
+                                              7, 8, 1
+                                      },
+                                      3, 3);
+
+    swapPenultimateRow(m1);
+    assert(areTwoMatricesEqual(m1, m2));
+
+    freeMemMatrix(&m1);
+    freeMemMatrix(&m2);
+}
+
+void test_swapPenultimateRow() {
+    test_swapPenultimateRow_manyPoints1();
+    test_swapPenultimateRow_manyPoints2();
+}
+
+// 13
+
+void test_countNonDescendingRowsMatrices_twoRowsAndCols() {
+    matrix *ms = createArrayOfMatrixFromArray((int[]) {
+                                                            7, 1,
+                                                            1, 1,
+
+                                                            1, 6,
+                                                            2, 2,
+
+                                                            5, 4,
+                                                            2, 3,
+
+                                                            1, 3,
+                                                            7, 9
+                                                            },
+                                              4, 2, 2);
+
+    assert(countNonDescendingRowsMatrices(ms, 4) == 2);
+
+    freeMemMatrices(ms, 4);
+}
+
+void test_countNonDescendingRowsMatrices_oneRow() {
+    matrix *ms = createArrayOfMatrixFromArray((int[]) {
+                                                      7, 1,
+
+                                                      1, 6,
+
+                                                      5, 4,
+
+                                                      7, 9
+                                              },
+                                              4, 1, 2);
+
+    assert(countNonDescendingRowsMatrices(ms, 4) == 2);
+
+    freeMemMatrices(ms, 4);
+}
+
+void test_countNonDescendingRowsMatrices_oneCol() {
+    matrix *ms = createArrayOfMatrixFromArray((int[]) {
+                                                      7,
+                                                      1,
+
+                                                      1,
+                                                      2,
+
+                                                      5,
+                                                      2,
+
+                                                      1,
+                                                      7
+                                              },
+                                              4, 2, 1);
+
+    assert(countNonDescendingRowsMatrices(ms, 4) == 4);
+
+    freeMemMatrices(ms, 4);
+}
+
+void test_countNonDescendingRowsMatrices_oneElem() {
+    matrix *ms = createArrayOfMatrixFromArray((int[]) {
+                                                      1,
+
+                                                      2,
+
+                                                      3,
+
+                                                      4
+                                              },
+                                              4, 1, 1);
+
+    assert(countNonDescendingRowsMatrices(ms, 4) == 4);
+
+    freeMemMatrices(ms, 4);
+}
+
+void test_countNonDescendingRowsMatrices() {
+    test_countNonDescendingRowsMatrices_twoRowsAndCols();
+    test_countNonDescendingRowsMatrices_oneRow();
+    test_countNonDescendingRowsMatrices_oneCol();
+    test_countNonDescendingRowsMatrices_oneElem();
+}
+
+// 14
+
+void test_countZeroRows_manyPoints1() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             0, 2, 3, 4,
+                                             0, 0, 0, 0,
+                                             0, 0, 0, 12
+                                     },
+                                     3, 4);
+    assert(countZeroRows(m) == 1);
+
+    freeMemMatrix(&m);
+}
+
+void test_countZeroRows_manyPoints2() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             0, 0, 0, 0,
+                                             0, 0, 0, 0,
+                                             0, 0, 0, 0
+                                     },
+                                     3, 4);
+    assert(countZeroRows(m) == 3);
+
+    freeMemMatrix(&m);
+}
+
+void test_countZeroRows_oneRow() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             0, 0, 0, 0
+                                     },
+                                     1, 4);
+    assert(countZeroRows(m) == 1);
+
+    freeMemMatrix(&m);
+}
+
+void test_countZeroRows_oneCol() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             0,
+                                             2,
+                                             3
+                                     },
+                                     3, 1);
+    assert(countZeroRows(m) == 1);
+
+    freeMemMatrix(&m);
+}
+
+void test_countZeroRows_oneElem() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             42
+                                     },
+                                     1, 1);
+    assert(countZeroRows(m) == 0);
+
+    freeMemMatrix(&m);
+}
+
+void test_countZeroRows() {
+    test_countZeroRows_manyPoints1();
+    test_countZeroRows_manyPoints2();
+    test_countZeroRows_oneRow();
+    test_countZeroRows_oneCol();
+    test_countZeroRows_oneElem();
+}
+
+// 15
+
+void test_getMaximumRate_manyPoints1() {
+    matrixf m = createMatrixFromArrayF((double []) {
+                                             0.3, 2.1, 3.4, 4.7,
+                                             2.1, 0.2, 0.3, 0.7,
+                                             0.1, 1.2, 0.3, 12.2
+                                     },
+                                     3, 4);
+    assert(fabs(getMaximumRate(m) - 12.2) < DBL_EPSILON);
+
+
+    freeMemMatrixF(&m);
+}
+
+void test_getMaximumRate_manyPoints2() {
+    matrixf m = createMatrixFromArrayF((double[]) {
+                                             0, 0, 0, 0,
+                                             0, 0, 0, 0,
+                                             0, 0, 0, 0.1
+                                     },
+                                     3, 4);
+    assert(fabs(getMaximumRate(m) - 0.1) < DBL_EPSILON);
+
+
+    freeMemMatrixF(&m);
+}
+
+void test_getMaximumRate_oneRow() {
+    matrixf m = createMatrixFromArrayF((double[]) {
+                                             1.2, 2.3, 4.3, 2.1
+                                     },
+                                     1, 4);
+    assert(fabs(getMaximumRate(m) - 4.3) < DBL_EPSILON);
+
+    freeMemMatrixF(&m);
+}
+
+void test_getMaximumRate_oneCol() {
+    matrixf m = createMatrixFromArrayF((double[]) {
+                                             0.2,
+                                             2.3,
+                                             3.7
+                                     },
+                                     3, 1);
+    assert(fabs(getMaximumRate(m) - 3.7) < DBL_EPSILON);
+
+    freeMemMatrixF(&m);
+}
+
+void test_getMaximumRate_oneElem() {
+    matrixf m = createMatrixFromArrayF((double[]) {
+                                             4.2
+                                     },
+                                     1, 1);
+    assert(fabs(getMaximumRate(m) - 4.2) < DBL_EPSILON);
+
+    freeMemMatrixF(&m);
+}
+
+void test_getMaximumRate() {
+    test_getMaximumRate_manyPoints1();
+    test_getMaximumRate_manyPoints2();
+    test_getMaximumRate_oneRow();
+    test_getMaximumRate_oneCol();
+    test_getMaximumRate_oneElem();
+}
+
+// 16
+
+void test_getNSpecialElement2_manyPoints1() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             2, 3, 5, 5, 4,
+                                             6, 2, 3, 8, 12,
+                                             12, 12, 2, 1, 2
+                                     },
+                                     3, 5);
+    assert(getNSpecialElement2(m) == 4);
+
+    freeMemMatrix(&m);
+}
+
+void test_getNSpecialElement2_manyPoints2() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             1, 0, 2, 0,
+                                             3, 0, 4, 0,
+                                             5, 0, 6, 0
+                                     },
+                                     3, 4);
+    assert(getNSpecialElement2(m) == 0);
+
+    freeMemMatrix(&m);
+}
+
+void test_getNSpecialElement2_oneRow() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             1, 2, 3, 4
+                                     },
+                                     1, 4);
+    assert(getNSpecialElement2(m) == 4);
+
+    freeMemMatrix(&m);
+}
+
+void test_getNSpecialElement2_oneCol() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             1,
+                                             2,
+                                             3
+                                     },
+                                     3, 1);
+    assert(getNSpecialElement2(m) == 3);
+
+    freeMemMatrix(&m);
+}
+
+void test_getNSpecialElement2_oneElem() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             42
+                                     },
+                                     1, 1);
+    assert(getNSpecialElement2(m) == 1);
+
+    freeMemMatrix(&m);
+}
+
+void test_getNSpecialElement2() {
+    test_getNSpecialElement2_manyPoints1();
+    test_getNSpecialElement2_manyPoints2();
+    test_getNSpecialElement2_oneRow();
+    test_getNSpecialElement2_oneCol();
+    test_getNSpecialElement2_oneElem();
+}
+
+// 17
+
+void test_getVectorIndexWithMaxAngle_manyPoints1() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             2, 2, 3,
+                                             5, 2, 3,
+                                             1, 2, 3
+                                     },
+                                     3, 3);
+    int vector[] = {1, 1, 1};
+
+    assert(getVectorIndexWithMaxAngle(m, vector) == 2);
+
+    freeMemMatrix(&m);
+}
+
+void test_getVectorIndexWithMaxAngle_manyPoints2() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             1, 2, 3,
+                                             5, 7, 10,
+                                             11, 22, 43
+                                     },
+                                     3, 3);
+    int vector[] = {1, 1, 1};
+
+    assert(getVectorIndexWithMaxAngle(m, vector) == 2);
+
+    freeMemMatrix(&m);
+}
+
+void test_getVectorIndexWithMaxAngle_oneRow() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             1, 2, 3
+                                     },
+                                     1, 3);
+    int vector[] = {1, 1, 1};
+
+    assert(getVectorIndexWithMaxAngle(m, vector) == 0);
+
+    freeMemMatrix(&m);
+}
+
+void test_getVectorIndexWithMaxAngle() {
+    test_getVectorIndexWithMaxAngle_manyPoints1();
+    test_getVectorIndexWithMaxAngle_manyPoints2();
+    test_getVectorIndexWithMaxAngle_oneRow();
+}
+
+// 18
+
+void test_getSpecialScalarProduct_minAndMaxInDifferentRowsAndCols() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             1, 3, 4,
+                                             5, 6, 7,
+                                             8, 9, 0
+                                     },
+                                     3, 3);
+    assert(getSpecialScalarProduct(m) == 4 * 8 + 7 * 9);
+
+    freeMemMatrix(&m);
+}
+
+void test_getSpecialScalarProduct_negativeElements() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             -1, -3, -4,
+                                             -5, -6, -7,
+                                             -8, -9, -10
+                                     },
+                                     3, 3);
+
+    assert(getSpecialScalarProduct(m) == 65);
+
+    freeMemMatrix(&m);
+}
+
+void test_getSpecialScalarProduct_minAndMaxInOneRow() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             1, 9, 2, 1,
+                                             2, 0, 2, 7,
+                                             3, 4, 2, 0
+                                     },
+                                     3, 4);
+
+    assert(getSpecialScalarProduct(m) == 17);
+
+    freeMemMatrix(&m);
+}
+
+void test_getSpecialScalarProduct_minAndMaxInOneCol() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             1, 3, 2, 1,
+                                             9, 0, 2, 7,
+                                             3, 4, 2, 0
+                                     },
+                                     3, 4);
+
+    assert(getSpecialScalarProduct(m) == 35);
+
+    freeMemMatrix(&m);
+}
+
+void test_getSpecialScalarProduct_oneElement() {
+    matrix m = createMatrixFromArray((int[]) {
+                                             42
+                                     },
+                                     1, 1);
+
+    assert(getSpecialScalarProduct(m) == 1764);
+
+    freeMemMatrix(&m);
+}
+
+
+void test_getSpecialScalarProduct() {
+    test_getSpecialScalarProduct_minAndMaxInDifferentRowsAndCols();
+    test_getSpecialScalarProduct_negativeElements();
+    test_getSpecialScalarProduct_minAndMaxInOneRow();
+    test_getSpecialScalarProduct_minAndMaxInOneCol();
+    test_getSpecialScalarProduct_oneElement();
+}
+
 void test_tasks() {
     test_swapColsWithMaxAndMinSquareMatrix();
     test_sortRowsByMinElement();
@@ -1519,119 +2220,23 @@ void test_tasks() {
     test_isMutuallyInverseMatrices();
     test_findSumOfMaxesOfPseudoDiagonal();
     test_getMinInArea();
-
+    test_sortByDistances();
+    test_countEqClassesByRowsSum();
+    test_getNSpecialElement();
+    test_swapPenultimateRow();
+    test_countNonDescendingRowsMatrices();
+    test_countZeroRows();
+    test_getMaximumRate();
+    test_getNSpecialElement2();
+    test_getVectorIndexWithMaxAngle();
+    test_getSpecialScalarProduct();
 }
-
-void test_getSpecialScalarProduct_positiveElements() {
-    matrix m = createMatrixFromArray(
-            (int[]) {
-                    1, 3, 4,
-                    5, 6, 7,
-                    8, 9, 0
-            }, 3, 3
-    );
-
-    assert(getSpecialScalarProduct(m) == 4 * 8 + 7 * 9);
-
-    freeMemMatrix(&m);
-}
-
-void test_getSpecialScalarProduct_negativeElements() {
-    matrix m = createMatrixFromArray(
-            (int[]) {
-                    -1, -3, -4,
-                    -5, -10, -7,
-                    -8, -9, -2
-            }, 3, 3
-    );
-
-    assert(getSpecialScalarProduct(m) == -1 * -3 + -3 * -10 + -4 * -9);
-
-    freeMemMatrix(&m);
-}
-
-void test_getSpecialScalarProduct_minAndMaxInOneRow() {
-    matrix m = createMatrixFromArray(
-            (int[]) {
-                    10, 1, 5,
-                    4, 7, 8,
-                    6, 3, 2
-            }, 3, 3
-    );
-
-    assert(getSpecialScalarProduct(m) == 10 * 1 + 1 * 7 + 5 * 3);
-
-    freeMemMatrix(&m);
-}
-
-void test_getSpecialScalarProduct_minAndMaxInOneCol() {
-    matrix m = createMatrixFromArray(
-            (int[]) {
-                    10, 4, 5,
-                    6, 7, 8,
-                    1, 3, 2
-            }, 3, 3
-    );
-
-    assert(getSpecialScalarProduct(m) == 10 * 10 + 4 * 6 + 5 * 1);
-
-    freeMemMatrix(&m);
-}
-
-void test_getSpecialScalarProduct_oneElement() {
-    matrix m = createMatrixFromArray(
-            (int[]) {
-                    10
-            }, 1, 1
-    );
-
-    assert(getSpecialScalarProduct(m) == 10 * 10);
-
-    freeMemMatrix(&m);
-}
-
-
-void test_getSpecialScalarProduct() {
-    test_getSpecialScalarProduct_positiveElements();
-    test_getSpecialScalarProduct_negativeElements();
-    test_getSpecialScalarProduct_minAndMaxInOneRow();
-    test_getSpecialScalarProduct_minAndMaxInOneCol();
-    test_getSpecialScalarProduct_oneElement();
-}
-
-
 
 int main() {
 
-    test_getSpecialScalarProduct();
-//    test();
-//    test_tasks();
-//
-//    matrixf *ms = createArrayOfMatrixFromArrayF(
-//            (double[]) {
-//                    0.2, 1.2,
-//                    1.4, 0.2,
-//                    0.3, 0.2,
-//
-//                    0.1, 1.2,
-//                    1.4, 0.2,
-//                    0.3, 0.1,
-//
-//                    0.1, 1.2,
-//                    1.3, 0.2,
-//                    0.3, 0.1,
-//            },
-//            3, 3, 2);
-//
-//    printMatrixWithMaxRate(ms, 3);
-//    swapPenultimateRow(m);
-//    outputMatrix(m);
-//    matrix m = createMatrixFromArray((int[]) {
-//            2, 3, 5, 5, 6,
-//            6, 2, 3, 8, 12,
-//            12, 12, 2, 1, 2
-//    }, 3, 5);
-//    printf("%d", getNSpecialElement2(m));
+    test();
+    test_tasks();
+
 
     return 0;
 }

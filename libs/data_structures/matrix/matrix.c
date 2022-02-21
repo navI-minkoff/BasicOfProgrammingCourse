@@ -40,6 +40,14 @@ void outputMatrixF(matrixf m) {
     printf("\n");
 }
 
+void freeMemMatrixF(matrixf *m) {
+    for (int i = 0; i < m->nRows; i++)
+        free(m->values[i]);
+    free(m->values);
+    m->nRows = 0;
+    m->nCols = 0;
+}
+
 void freeMemMatrix(matrix *m) {
     for (int i = 0; i < m->nRows; i++)
         free(m->values[i]);
