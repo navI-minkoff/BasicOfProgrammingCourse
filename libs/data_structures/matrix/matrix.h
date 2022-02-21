@@ -12,6 +12,19 @@ typedef struct matrix {
     int nCols;    // количество столбцов
 } matrix;
 
+typedef struct matrixf {
+    double **values; // элементы матрицы
+    int nRows;    // количество рядов
+    int nCols;    // количество столбцов
+} matrixf;
+
+matrixf getMemMatrixF(int nRows, int nCols);
+
+matrixf *getMemArrayOfMatricesF(int nMatrices,
+                                int nRows, int nCols);
+
+void outputMatrixF(matrixf m);
+
 typedef struct position {
     int rowIndex;
     int colIndex;
@@ -105,4 +118,9 @@ matrix createMatrixFromArray(const int *a, int nRows,
 matrix *createArrayOfMatrixFromArray(const int *values,
                                      int nMatrices, int nRows, int nCols);
 
+matrixf createMatrixFromArrayF(const double *a,
+                               int nRows, int nCols);
+
+matrixf *createArrayOfMatrixFromArrayF(const double *values,
+                                       int nMatrices, int nRows, int nCols);
 #endif

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include <float.h>
 #include "libs/data_structures/bitset/bitset.h"
 #include "libs/data_structures/unordered_array/unordered_array_set.h"
 #include "libs/data_structures/ordered_array/ordered_array_set.h"
@@ -957,7 +958,38 @@ void printMatrixWithMaxZeroRows(matrix *ms, int nMatrix) {
             outputMatrix(ms[i]);
 }
 
-// TEST FOR THE FIRS EIGHT TASKS
+// fifteenth task
+
+double getMaximumRate(matrixf m) {
+    double maxRate = fabs(m.values[0][0]);
+    for (size_t i = 0; i < m.nRows; i++) {
+        for (size_t j = 0; j < m.nCols; j++) {
+            double potentialMaxRate = fabs(m.values[i][j]);
+            if (potentialMaxRate > maxRate)
+                maxRate = potentialMaxRate;
+        }
+    }
+
+    return maxRate;
+}
+
+void printMatrixWithMaxRate(matrixf *ms, int nMatrix) {
+    double minRate = getMaximumRate(ms[0]);
+    double maxRatesMatrix[nMatrix];
+    maxRatesMatrix[0] = minRate;
+    for (size_t i = 1; i < nMatrix; i++) {
+        double maxRate = getMaximumRate(ms[i]);
+        maxRatesMatrix[i] = maxRate;
+        if (maxRate < minRate)
+            minRate = maxRate;
+    }
+
+    for (size_t i = 0; i < nMatrix; i++) {
+        if (fabs(maxRatesMatrix[i] - minRate) < DBL_EPSILON)
+            outputMatrixF(ms[i]);
+    }
+}
+// TEST FOR TASKS
 
 // 1
 void test_swapColsWithMaxAndMinSquareMatrix_maxAndMinimumInDifferentColumns() {
@@ -1401,31 +1433,23 @@ int main() {
 //    test();
 //    test_tasks();
 
-    matrix *ms = createArrayOfMatrixFromArray(
-            (int[]) {
-                    0, 1,
-                    1, 0,
-                    0, 0,
+    matrixf *ms = createArrayOfMatrixFromArrayF(
+            (double []) {
+                    0.2, 1.2,
+                    1.4, 0.2,
+                    0.3, 0.2,
 
-                    1, 1,
-                    2, 1,
-                    1, 1,
+                    0.1, 1.2,
+                    1.4, 0.2,
+                    0.3, 0.1,
 
-                    0, 0,
-                    0, 0,
-                    4, 7,
-
-                    0, 0,
-                    0, 1,
-                    0, 0,
-
-                    0, 1,
-                    0, 2,
-                    0, 3
+                    0.1, 1.2,
+                    1.3, 0.2,
+                    0.3, 0.1,
             },
-            5, 3, 2);
+            3, 3, 2);
 
-    printMatrixWithMaxZeroRows(ms, 5);
+    printMatrixWithMaxRate(ms, 3);
 //    swapPenultimateRow(m);
 //    outputMatrix(m);
     return 0;
