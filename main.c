@@ -989,6 +989,29 @@ void printMatrixWithMaxRate(matrixf *ms, int nMatrix) {
             outputMatrixF(ms[i]);
     }
 }
+
+// sixteenth task
+
+int getNSpecialElement2(matrix m) {
+    int countSpecialElement = 0;
+    for (size_t i = 0; i < m.nRows; i++) {
+        for (size_t j = 0; j < m.nCols; j++) {
+            bool isSpecialElement = 1;
+            for (size_t k = 0; k < m.nCols; k++) {
+                if (k < j) {
+                    if (m.values[i][j] <= m.values[i][k])
+                        isSpecialElement = false;
+                } else if (k > j)
+                    if (m.values[i][j] > m.values[i][k])
+                        isSpecialElement = false;
+            }
+            countSpecialElement += isSpecialElement;
+        }
+    }
+
+    return countSpecialElement;
+}
+
 // TEST FOR TASKS
 
 // 1
@@ -1432,25 +1455,31 @@ int main() {
 
 //    test();
 //    test_tasks();
-
-    matrixf *ms = createArrayOfMatrixFromArrayF(
-            (double []) {
-                    0.2, 1.2,
-                    1.4, 0.2,
-                    0.3, 0.2,
-
-                    0.1, 1.2,
-                    1.4, 0.2,
-                    0.3, 0.1,
-
-                    0.1, 1.2,
-                    1.3, 0.2,
-                    0.3, 0.1,
-            },
-            3, 3, 2);
-
-    printMatrixWithMaxRate(ms, 3);
+//
+//    matrixf *ms = createArrayOfMatrixFromArrayF(
+//            (double[]) {
+//                    0.2, 1.2,
+//                    1.4, 0.2,
+//                    0.3, 0.2,
+//
+//                    0.1, 1.2,
+//                    1.4, 0.2,
+//                    0.3, 0.1,
+//
+//                    0.1, 1.2,
+//                    1.3, 0.2,
+//                    0.3, 0.1,
+//            },
+//            3, 3, 2);
+//
+//    printMatrixWithMaxRate(ms, 3);
 //    swapPenultimateRow(m);
 //    outputMatrix(m);
+    matrix m = createMatrixFromArray((int[]) {
+            2, 3, 5, 5, 6,
+            6, 2, 3, 8, 12,
+            12, 12, 2, 1, 2
+    }, 3, 5);
+    printf("%d", getNSpecialElement2(m));
     return 0;
 }
