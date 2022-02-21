@@ -47,6 +47,7 @@ void outputMatrix(matrix m) {
             printf("%d ", m.values[i][j]);
         printf("\n");
     }
+    printf("\n");
 }
 
 void outputMatrices(matrix *ms, int nMatrices) {

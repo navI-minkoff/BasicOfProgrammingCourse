@@ -925,6 +925,38 @@ int countNonDescendingRowsMatrices(matrix *ms, int nMatrix) {
 
     return countNonDescendingMatrices;
 }
+
+// fourteenth task
+
+int countZeroRows(matrix m) {
+    int zeroRows = 0;
+    for (size_t i = 0; i < m.nRows; i++) {
+        bool isZeroRow = true;
+        for (size_t j = 0; j < m.nCols && isZeroRow; j++) {
+            if (m.values[i][j] != 0)
+                isZeroRow = false;
+        }
+        zeroRows += isZeroRow;
+    }
+
+    return zeroRows;
+}
+
+void printMatrixWithMaxZeroRows(matrix *ms, int nMatrix) {
+    int countZeroRowsMatrix[nMatrix];
+    int maxZeroRows = 0;
+    for (size_t i = 0; i < nMatrix; i++) {
+        int zeroRows = countZeroRows(ms[i]);
+        countZeroRowsMatrix[i] = zeroRows;
+        if (zeroRows > maxZeroRows)
+            maxZeroRows = zeroRows;
+    }
+
+    for (size_t i = 0; i < nMatrix; i++)
+        if (countZeroRowsMatrix[i] == maxZeroRows)
+            outputMatrix(ms[i]);
+}
+
 // TEST FOR THE FIRS EIGHT TASKS
 
 // 1
@@ -1371,17 +1403,29 @@ int main() {
 
     matrix *ms = createArrayOfMatrixFromArray(
             (int[]) {
-                    0, 0, 1,
+                    0, 1,
+                    1, 0,
+                    0, 0,
 
-                    1, 6, 7,
+                    1, 1,
+                    2, 1,
+                    1, 1,
 
-                    -1, 0, 1,
+                    0, 0,
+                    0, 0,
+                    4, 7,
 
-                    1, 2, 3,
+                    0, 0,
+                    0, 1,
+                    0, 0,
+
+                    0, 1,
+                    0, 2,
+                    0, 3
             },
-            4, 1, 3);
+            5, 3, 2);
 
-    printf("%d", countNonDescendingRowsMatrices(ms, 4));
+    printMatrixWithMaxZeroRows(ms, 5);
 //    swapPenultimateRow(m);
 //    outputMatrix(m);
     return 0;
