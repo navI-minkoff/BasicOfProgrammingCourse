@@ -6,21 +6,27 @@
 
 #IncludeRegexTransform: 
 
-C:/programms/5a/programms/cource/libs/algorithms/array/array.h
-stddef.h
--
+C:/programms/5a/programms/cource/libs/data_structures/main.c
+string/string_.h
+C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
+string/tasks/allTaskTests.h
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/allTaskTests.h
 
-C:/programms/5a/programms/cource/libs/data_structures/matrix/matrix.c
-matrix.h
-C:/programms/5a/programms/cource/libs/data_structures/matrix/matrix.h
-
-C:/programms/5a/programms/cource/libs/data_structures/matrix/matrix.h
-../../algorithms/array/array.h
-C:/programms/5a/programms/cource/libs/algorithms/array/array.h
-malloc.h
--
+C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
 stdio.h
 -
-stdbool.h
+ctype.h
 -
+memory.h
+-
+math.h
+-
+
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/allTaskTests.h
+removeNonLetters.h
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/removeNonLetters.h
+
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/removeNonLetters.h
+../string_.h
+C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
 
