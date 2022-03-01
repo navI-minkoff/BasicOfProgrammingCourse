@@ -5,14 +5,16 @@
 #include <ctype.h>
 #include <memory.h>
 #include <math.h>
+#include <stdbool.h>
 
 #define MAX_STRING_SIZE 100
 #define MAX_N_WORDS_IN_STRING 100
-#define MAX_WORD_SIZE 42
+#define MAX_WORD_SIZE 20
 
 #define ASSERT_STRING(expected, got) assertString(expected, got, \
 __FILE__ , __FUNCTION__ , __LINE__ )
 
+char _stringBuffer[MAX_STRING_SIZE + 1];
 
 size_t strlen_(char *begin);
 
@@ -43,6 +45,5 @@ void assertString(const char *expected, char *got,
 
 char *getEndOfString(char *begin);
 
-char _stringBuffer[MAX_STRING_SIZE + 1];
 
 #endif

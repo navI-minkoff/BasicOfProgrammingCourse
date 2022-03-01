@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/programms/5a/programms/cource/libs/data_structures/string/string_.c
+string_.h
+C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
+
+C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
+stdio.h
+-
+ctype.h
+-
+memory.h
+-
+math.h
+-
+stdbool.h
+-
+

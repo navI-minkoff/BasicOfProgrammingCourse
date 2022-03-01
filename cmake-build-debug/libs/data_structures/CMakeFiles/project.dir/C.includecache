@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/programms/5a/programms/cource/libs/data_structures/main.c
+string/tasks/allTaskTests.h
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/allTaskTests.h
+
+C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
+stdio.h
+-
+ctype.h
+-
+memory.h
+-
+math.h
+-
+stdbool.h
+-
+
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/allTaskTests.h
+removeNonLetters.h
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/removeNonLetters.h
+removeExtraSpaces.h
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/removeExtraSpaces.h
+
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/removeExtraSpaces.h
+../string_.h
+C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
+
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/removeNonLetters.h
+../string_.h
+C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
+

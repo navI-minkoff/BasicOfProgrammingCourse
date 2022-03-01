@@ -265,6 +265,9 @@
 		<Unit filename="C:/programms/5a/programms/cource/libs/data_structures/string/tasks/allTaskTests.h">
 			<Option target="data_structures"/>
 		</Unit>
+		<Unit filename="C:/programms/5a/programms/cource/libs/data_structures/string/tasks/removeExtraSpaces.h">
+			<Option target="data_structures"/>
+		</Unit>
 		<Unit filename="C:/programms/5a/programms/cource/libs/data_structures/string/tasks/removeNonLetters.h">
 			<Option target="data_structures"/>
 			<Option target="str"/>
