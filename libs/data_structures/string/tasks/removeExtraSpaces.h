@@ -43,10 +43,10 @@ void test_removeExtraSpaces_withWhitespaceCharacters() {
 }
 
 void test_removeExtraSpaces_withMoreWhitespaceCharacters() {
-    char s[] = " I    want    five ";
+    char s[] = "  I    want    five  ";
     removeExtraSpaces(s);
 
-    ASSERT_STRING(" I want five ", s);
+    ASSERT_STRING("  I want five ", s);
 }
 
 
