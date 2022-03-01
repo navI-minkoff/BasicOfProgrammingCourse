@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "C:/programms/5a/programms/cource/libs/data_structures/bitset/bitset.c" "C:/programms/5a/programms/cource/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/bitset/bitset.c.obj"
+  "C:/programms/5a/programms/cource/libs/data_structures/main.c" "C:/programms/5a/programms/cource/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/main.c.obj"
   "C:/programms/5a/programms/cource/libs/data_structures/matrix/matrix.c" "C:/programms/5a/programms/cource/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/matrix/matrix.c.obj"
   "C:/programms/5a/programms/cource/libs/data_structures/ordered_array/ordered_array_set.c" "C:/programms/5a/programms/cource/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/ordered_array/ordered_array_set.c.obj"
   "C:/programms/5a/programms/cource/libs/data_structures/string/string_.c" "C:/programms/5a/programms/cource/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/string/string_.c.obj"

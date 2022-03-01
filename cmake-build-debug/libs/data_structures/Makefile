@@ -129,6 +129,34 @@ data_structures/fast:
 	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/build
 .PHONY : data_structures/fast
 
+# Convenience name for target.
+libs/data_structures/CMakeFiles/project.dir/rule:
+	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 libs/data_structures/CMakeFiles/project.dir/rule
+.PHONY : libs/data_structures/CMakeFiles/project.dir/rule
+
+# Convenience name for target.
+project: libs/data_structures/CMakeFiles/project.dir/rule
+.PHONY : project
+
+# fast build rule for target.
+project/fast:
+	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\project.dir\build.make libs/data_structures/CMakeFiles/project.dir/build
+.PHONY : project/fast
+
+# Convenience name for target.
+libs/data_structures/CMakeFiles/str.dir/rule:
+	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 libs/data_structures/CMakeFiles/str.dir/rule
+.PHONY : libs/data_structures/CMakeFiles/str.dir/rule
+
+# Convenience name for target.
+str: libs/data_structures/CMakeFiles/str.dir/rule
+.PHONY : str
+
+# fast build rule for target.
+str/fast:
+	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\str.dir\build.make libs/data_structures/CMakeFiles/str.dir/build
+.PHONY : str/fast
+
 bitset/bitset.obj: bitset/bitset.c.obj
 .PHONY : bitset/bitset.obj
 
@@ -152,6 +180,33 @@ bitset/bitset.s: bitset/bitset.c.s
 bitset/bitset.c.s:
 	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/bitset/bitset.c.s
 .PHONY : bitset/bitset.c.s
+
+main.obj: main.c.obj
+.PHONY : main.obj
+
+# target to build an object file
+main.c.obj:
+	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/main.c.obj
+	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\project.dir\build.make libs/data_structures/CMakeFiles/project.dir/main.c.obj
+.PHONY : main.c.obj
+
+main.i: main.c.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.c.i:
+	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/main.c.i
+	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\project.dir\build.make libs/data_structures/CMakeFiles/project.dir/main.c.i
+.PHONY : main.c.i
+
+main.s: main.c.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.c.s:
+	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/main.c.s
+	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\project.dir\build.make libs/data_structures/CMakeFiles/project.dir/main.c.s
+.PHONY : main.c.s
 
 matrix/matrix.obj: matrix/matrix.c.obj
 .PHONY : matrix/matrix.obj
@@ -207,6 +262,7 @@ string/string_.obj: string/string_.c.obj
 # target to build an object file
 string/string_.c.obj:
 	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string/string_.c.obj
+	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\str.dir\build.make libs/data_structures/CMakeFiles/str.dir/string/string_.c.obj
 .PHONY : string/string_.c.obj
 
 string/string_.i: string/string_.c.i
@@ -215,6 +271,7 @@ string/string_.i: string/string_.c.i
 # target to preprocess a source file
 string/string_.c.i:
 	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string/string_.c.i
+	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\str.dir\build.make libs/data_structures/CMakeFiles/str.dir/string/string_.c.i
 .PHONY : string/string_.c.i
 
 string/string_.s: string/string_.c.s
@@ -223,6 +280,7 @@ string/string_.s: string/string_.c.s
 # target to generate assembly for a file
 string/string_.c.s:
 	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string/string_.c.s
+	cd /d C:\programms\5a\programms\cource\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\str.dir\build.make libs/data_structures/CMakeFiles/str.dir/string/string_.c.s
 .PHONY : string/string_.c.s
 
 # Help Target
@@ -234,9 +292,14 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... data_structures
+	@echo ... project
+	@echo ... str
 	@echo ... bitset/bitset.obj
 	@echo ... bitset/bitset.i
 	@echo ... bitset/bitset.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 	@echo ... matrix/matrix.obj
 	@echo ... matrix/matrix.i
 	@echo ... matrix/matrix.s

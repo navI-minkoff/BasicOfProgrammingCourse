@@ -54,5 +54,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/1.dir/DependInfo.cmake"
   "libs/data_structures/CMakeFiles/data_structures.dir/DependInfo.cmake"
+  "libs/data_structures/CMakeFiles/project.dir/DependInfo.cmake"
+  "libs/data_structures/CMakeFiles/str.dir/DependInfo.cmake"
   "libs/algorithms/CMakeFiles/algorithms.dir/DependInfo.cmake"
   )
