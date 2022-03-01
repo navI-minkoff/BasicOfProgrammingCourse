@@ -3,79 +3,84 @@
 
 #include "../string_.h"
 
-void digitToStartWithoutChangingOrder(WordDescriptor word) {
-    char *endStringBuffer = copy(word.begin, word.end, _stringBuffer);
-    char *recPosition = copyIf(_stringBuffer, endStringBuffer, word.begin, isdigit);
+void digitsAtTheBeginningWithChangeLettersAtTheEnd(WordDescriptor word) {
+    char *endStringBuffer = copy(word.begin, word.end,
+                                 _stringBuffer);
+    char *recPosition = copyIfReverse(endStringBuffer - 1,
+                                      _stringBuffer - 1,
+                                      word.begin, isdigit);
     copyIf(_stringBuffer, endStringBuffer, recPosition, isalpha);
+
 }
 
-void digitToStartForTheEntireString(char *s) {
+void digitsBeginningChangeLettersEndForTheEntireString(char *s) {
     WordDescriptor w;
     char *beginSearch = s;
     while (getWord(beginSearch, &w)) {
-        digitToStartWithoutChangingOrder(w);
+        digitsAtTheBeginningWithChangeLettersAtTheEnd(w);
         beginSearch = w.end;
     }
 }
 
 // TESTS
 
-void test_digitToStartForTheEntireString_digitsAtTheEnd() {
+void test_digitsBeginningChangeLettersEndForTheEntireString_digitsAtTheEnd() {
     char s[] = "ABC123";
-    digitToStartForTheEntireString(s);
+    digitsBeginningChangeLettersEndForTheEntireString(s);
 
-    ASSERT_STRING("123ABC", s);
+    ASSERT_STRING("321ABC", s);
 }
 
-void test_digitToStartForTheEntireString_digitsInWords() {
+void test_digitsBeginningChangeLettersEndForTheEntireString_digitsInWords() {
     char s[] = "A3B2C1       F42C42F42";
-    digitToStartForTheEntireString(s);
+    digitsBeginningChangeLettersEndForTheEntireString(s);
 
-    ASSERT_STRING("321ABC       424242FCF", s);
+    ASSERT_STRING("123ABC       242424FCF", s);
 }
 
-void test_digitToStartForTheEntireString_digitsInStart() {
+void test_digitsBeginningChangeLettersEndForTheEntireString_digitsInStart() {
     char s[] = "321ABC       424242FCF";
-    digitToStartForTheEntireString(s);
+    digitsBeginningChangeLettersEndForTheEntireString(s);
 
-    ASSERT_STRING("321ABC       424242FCF", s);
+    ASSERT_STRING("123ABC       242424FCF", s);
 }
 
-void test_digitToStartForTheEntireString_noDigits() {
+void test_digitsBeginningChangeLettersEndForTheEntireString_noDigits() {
     char s[] = "ABC FCF";
-    digitToStartForTheEntireString(s);
+    digitsBeginningChangeLettersEndForTheEntireString(s);
 
     ASSERT_STRING("ABC FCF", s);
 }
 
-void test_digitToStartForTheEntireString_noLetters() {
+void test_digitsBeginningChangeLettersEndForTheEntireString_noLetters() {
     char s[] = "123 4 56";
-    digitToStartForTheEntireString(s);
+    digitsBeginningChangeLettersEndForTheEntireString(s);
 
-    ASSERT_STRING("123 4 56", s);
+    ASSERT_STRING("321 4 65", s);
 }
 
-void test_digitToStartForTheEntireString_allSpaces() {
+void test_digitsBeginningChangeLettersEndForTheEntireString_allSpaces() {
     char s[] = "\n   \t \n";
-    digitToStartForTheEntireString(s);
+    digitsBeginningChangeLettersEndForTheEntireString(s);
 
     ASSERT_STRING("\n   \t \n", s);
 }
 
-void test_digitToStartForTheEntireString_emptyString() {
+void test_digitsBeginningChangeLettersEndForTheEntireString_emptyString() {
     char s[] = "";
-    digitToStartForTheEntireString(s);
+    digitsBeginningChangeLettersEndForTheEntireString(s);
     ASSERT_STRING("", s);
 }
 
-void test_digitToStartForTheEntireString() {
-    test_digitToStartForTheEntireString_digitsAtTheEnd();
-    test_digitToStartForTheEntireString_digitsInWords();
-    test_digitToStartForTheEntireString_digitsInStart();
-    test_digitToStartForTheEntireString_noDigits();
-    test_digitToStartForTheEntireString_noLetters();
-    test_digitToStartForTheEntireString_allSpaces();
-    test_digitToStartForTheEntireString_emptyString();
+void test_digitsBeginningChangeLettersEndForTheEntireString() {
+    test_digitsBeginningChangeLettersEndForTheEntireString_digitsAtTheEnd();
+    test_digitsBeginningChangeLettersEndForTheEntireString_digitsInWords();
+    test_digitsBeginningChangeLettersEndForTheEntireString_digitsInStart();
+    test_digitsBeginningChangeLettersEndForTheEntireString_noDigits();
+    test_digitsBeginningChangeLettersEndForTheEntireString_noLetters();
+    test_digitsBeginningChangeLettersEndForTheEntireString_allSpaces();
+    test_digitsBeginningChangeLettersEndForTheEntireString_emptyString();
 
 }
+
 #endif //INC_1_DIGITTOSTARTFORTHEENTIRESTRING_H
