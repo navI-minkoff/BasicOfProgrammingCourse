@@ -24,7 +24,7 @@ matrixf getMemMatrixF(int nRows, int nCols) {
 }
 
 matrixf *getMemArrayOfMatricesF(int nMatrices,
-                              int nRows, int nCols) {
+                                int nRows, int nCols) {
     matrixf *ms = (matrixf *) malloc(sizeof(matrixf) * nMatrices);
     for (int i = 0; i < nMatrices; i++)
         ms[i] = getMemMatrixF(nRows, nCols);
@@ -237,7 +237,7 @@ matrix *createArrayOfMatrixFromArray(const int *values,
 }
 
 matrixf createMatrixFromArrayF(const double *a,
-                             int nRows, int nCols) {
+                               int nRows, int nCols) {
     matrixf m = getMemMatrixF(nRows, nCols);
 
     int k = 0;
@@ -249,7 +249,7 @@ matrixf createMatrixFromArrayF(const double *a,
 }
 
 matrixf *createArrayOfMatrixFromArrayF(const double *values,
-                                     int nMatrices, int nRows, int nCols) {
+                                       int nMatrices, int nRows, int nCols) {
     matrixf *ms = getMemArrayOfMatricesF(nMatrices, nRows, nCols);
 
     int l = 0;
