@@ -7,6 +7,7 @@
 #include "digitsAtTheBeginningWithChangeLettersAtTheEnd.h"
 #include "eachDigitWithItsCorrespondingNumberGaps.h"
 #include "replace.h"
+#include "wordsAreOrderedLexicographically.h"
 
 void test_tasks() {
     test_removeNonLetters();
@@ -15,6 +16,7 @@ void test_tasks() {
     test_digitsAtTheEndForTheEntireString();
     test_eachDigitWithItsCorrespondingNumberGaps();
     test_replace();
+    test_wordsAreOrderedLexicographically();
 }
 
 #endif //INC_1_ALLTASKTESTS_H

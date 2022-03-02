@@ -21,6 +21,8 @@ math.h
 -
 stdbool.h
 -
+assert.h
+-
 
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/allTaskTests.h
 removeNonLetters.h
@@ -35,6 +37,8 @@ eachDigitWithItsCorrespondingNumberGaps.h
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/eachDigitWithItsCorrespondingNumberGaps.h
 replace.h
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/replace.h
+wordsAreOrderedLexicographically.h
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/wordsAreOrderedLexicographically.h
 
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/digitToStartForTheEntireString.h
 ../string_.h
@@ -57,6 +61,10 @@ C:/programms/5a/programms/cource/libs/data_structures/string/tasks/removeNonLett
 C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
 
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/replace.h
+../string_.h
+C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
+
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/wordsAreOrderedLexicographically.h
 ../string_.h
 C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
 
