@@ -33,6 +33,8 @@ digitsAtTheBeginningWithChangeLettersAtTheEnd.h
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/digitsAtTheBeginningWithChangeLettersAtTheEnd.h
 eachDigitWithItsCorrespondingNumberGaps.h
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/eachDigitWithItsCorrespondingNumberGaps.h
+replace.h
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/replace.h
 
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/digitToStartForTheEntireString.h
 ../string_.h
@@ -51,6 +53,10 @@ C:/programms/5a/programms/cource/libs/data_structures/string/tasks/removeExtraSp
 C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
 
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/removeNonLetters.h
+../string_.h
+C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
+
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/replace.h
 ../string_.h
 C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
 

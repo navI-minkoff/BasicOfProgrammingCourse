@@ -6,6 +6,7 @@
 #include "digitToStartForTheEntireString.h"
 #include "digitsAtTheBeginningWithChangeLettersAtTheEnd.h"
 #include "eachDigitWithItsCorrespondingNumberGaps.h"
+#include "replace.h"
 
 void test_tasks() {
     test_removeNonLetters();
@@ -13,6 +14,7 @@ void test_tasks() {
     test_digitsBeginningChangeLettersEndForTheEntireString();
     test_digitsAtTheEndForTheEntireString();
     test_eachDigitWithItsCorrespondingNumberGaps();
+    test_replace();
 }
 
 #endif //INC_1_ALLTASKTESTS_H
