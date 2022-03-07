@@ -8,6 +8,7 @@
 #include "eachDigitWithItsCorrespondingNumberGaps.h"
 #include "replace.h"
 #include "wordsAreOrderedLexicographically.h"
+#include "printWordsInReverseOrder.h"
 
 void test_tasks() {
     test_removeNonLetters();

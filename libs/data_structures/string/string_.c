@@ -128,3 +128,14 @@ bool getWordReverse(char *rbegin, char *rend, WordDescriptor *word) {
 int areWordsEqual(WordDescriptor w1, WordDescriptor w2) {
     return strcmp(w1.begin, w2.begin);
 }
+
+void getBagOfWords(BagOfWords *bag, char *s) {
+    bag->size = 0;
+    WordDescriptor w;
+    char *beginSearch = s;
+    while (getWord(beginSearch, &w)) {
+        bag->words[bag->size++] = w;
+
+        beginSearch = w.end;
+    }
+}

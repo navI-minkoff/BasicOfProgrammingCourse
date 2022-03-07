@@ -111,7 +111,8 @@
 				13,
 				14,
 				15,
-				16
+				16,
+				17
 			]
 		}
 	],
@@ -205,6 +206,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "libs/data_structures/string/tasks/wordsAreOrderedLexicographically.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/data_structures/string/tasks/printWordsInReverseOrder.h",
 			"sourceGroupIndex" : 1
 		}
 	],

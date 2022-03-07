@@ -4,21 +4,21 @@
 #include "../string_.h"
 
 bool wordsAreOrderedLexicographically(char *s) {
-    WordDescriptor w1;
-    WordDescriptor w2;
+    WordDescriptor currentWord;
+    WordDescriptor previousWord;
     char *beginSearch = s;
 
-    if (!getWord(beginSearch, &w1)) {
+    if (!getWord(beginSearch, &currentWord)) {
         return true;
     }
 
-    w2 = w1;
-    while (getWord(beginSearch, &w1)) {
-        if (areWordsEqual(w1, w2) < 0)
+    previousWord = currentWord;
+    while (getWord(beginSearch, &currentWord)) {
+        if (areWordsEqual(currentWord, previousWord) < 0)
             return false;
 
-        beginSearch = w1.end;
-        w2 = w1;
+        beginSearch = currentWord.end;
+        previousWord = currentWord;
     }
 
     return true;

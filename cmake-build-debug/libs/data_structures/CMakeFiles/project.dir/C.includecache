@@ -9,6 +9,8 @@
 C:/programms/5a/programms/cource/libs/data_structures/main.c
 string/tasks/allTaskTests.h
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/allTaskTests.h
+string/tasks/printWordsInReverseOrder.h
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/printWordsInReverseOrder.h
 
 C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
 stdio.h
@@ -39,6 +41,8 @@ replace.h
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/replace.h
 wordsAreOrderedLexicographically.h
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/wordsAreOrderedLexicographically.h
+printWordsInReverseOrder.h
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/printWordsInReverseOrder.h
 
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/digitToStartForTheEntireString.h
 ../string_.h
@@ -49,6 +53,10 @@ C:/programms/5a/programms/cource/libs/data_structures/string/tasks/digitsAtTheBe
 C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
 
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/eachDigitWithItsCorrespondingNumberGaps.h
+../string_.h
+C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
+
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/printWordsInReverseOrder.h
 ../string_.h
 C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
 
