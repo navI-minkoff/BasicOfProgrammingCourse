@@ -12,6 +12,7 @@
 #include "countWordsPalindromes.h"
 #include "stringMerging.h"
 #include "reverseWordOrderOfAString.h"
+#include "wordBeforeFirstWordWithA.h"
 
 void test_tasks() {
     test_removeNonLetters();
@@ -23,7 +24,8 @@ void test_tasks() {
     test_wordsAreOrderedLexicographically();
     test_countWordsPalindromes();
     test_stringMerging();
-    test_reverseWordOrderOfAString();
+//    test_reverseWordOrderOfAString();
+    testAll_getWordBeforeFirstWordWithA();
 
 }
 

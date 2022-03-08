@@ -49,6 +49,8 @@ stringMerging.h
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/stringMerging.h
 reverseWordOrderOfAString.h
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/reverseWordOrderOfAString.h
+wordBeforeFirstWordWithA.h
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/wordBeforeFirstWordWithA.h
 
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/countWordsPalindromes.h
 ../string_.h
@@ -87,6 +89,10 @@ C:/programms/5a/programms/cource/libs/data_structures/string/tasks/reverseWordOr
 C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
 
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/stringMerging.h
+../string_.h
+C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
+
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/wordBeforeFirstWordWithA.h
 ../string_.h
 C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
 

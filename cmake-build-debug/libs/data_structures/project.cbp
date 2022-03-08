@@ -190,6 +190,9 @@
 		<Unit filename="C:/programms/5a/programms/cource/libs/data_structures/string/tasks/stringMerging.h">
 			<Option target="data_structures"/>
 		</Unit>
+		<Unit filename="C:/programms/5a/programms/cource/libs/data_structures/string/tasks/wordBeforeFirstWordWithA.h">
+			<Option target="data_structures"/>
+		</Unit>
 		<Unit filename="C:/programms/5a/programms/cource/libs/data_structures/string/tasks/wordsAreOrderedLexicographically.h">
 			<Option target="data_structures"/>
 		</Unit>

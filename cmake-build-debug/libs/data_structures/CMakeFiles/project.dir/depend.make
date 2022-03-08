@@ -15,4 +15,5 @@ libs/data_structures/CMakeFiles/project.dir/main.c.obj: \
  ../libs/data_structures/string/tasks/replace.h \
  ../libs/data_structures/string/tasks/reverseWordOrderOfAString.h \
  ../libs/data_structures/string/tasks/stringMerging.h \
+ ../libs/data_structures/string/tasks/wordBeforeFirstWordWithA.h \
  ../libs/data_structures/string/tasks/wordsAreOrderedLexicographically.h
