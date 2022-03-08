@@ -116,7 +116,8 @@
 				18,
 				19,
 				20,
-				21
+				21,
+				22
 			]
 		}
 	],
@@ -235,6 +236,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "libs/data_structures/string/tasks/wordBeforeFirstWordWithA.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/data_structures/string/tasks/getLastWordFirstStringInSecond.h",
 			"sourceGroupIndex" : 1
 		}
 	],

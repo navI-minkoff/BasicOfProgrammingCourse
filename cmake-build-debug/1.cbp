@@ -277,6 +277,9 @@
 		<Unit filename="C:/programms/5a/programms/cource/libs/data_structures/string/tasks/eachDigitWithItsCorrespondingNumberGaps.h">
 			<Option target="data_structures"/>
 		</Unit>
+		<Unit filename="C:/programms/5a/programms/cource/libs/data_structures/string/tasks/getLastWordFirstStringInSecond.h">
+			<Option target="data_structures"/>
+		</Unit>
 		<Unit filename="C:/programms/5a/programms/cource/libs/data_structures/string/tasks/printWordsInReverseOrder.h">
 			<Option target="data_structures"/>
 		</Unit>

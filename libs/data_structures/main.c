@@ -6,7 +6,5 @@ int main() {
 
     test_tasks();
 
-
-
     return 0;
 }

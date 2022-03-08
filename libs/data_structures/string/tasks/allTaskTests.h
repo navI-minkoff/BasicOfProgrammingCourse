@@ -13,6 +13,7 @@
 #include "stringMerging.h"
 #include "reverseWordOrderOfAString.h"
 #include "wordBeforeFirstWordWithA.h"
+#include "getLastWordFirstStringInSecond.h"
 
 void test_tasks() {
     test_removeNonLetters();
@@ -26,6 +27,7 @@ void test_tasks() {
     test_stringMerging();
 //    test_reverseWordOrderOfAString();
     testAll_getWordBeforeFirstWordWithA();
+    test_getLastWordFirstStringInSecond();
 
 }
 
