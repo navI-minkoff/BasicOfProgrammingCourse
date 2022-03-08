@@ -5,6 +5,7 @@ libs/data_structures/CMakeFiles/project.dir/main.c.obj: \
  ../libs/data_structures/main.c \
  ../libs/data_structures/string/string_.h \
  ../libs/data_structures/string/tasks/allTaskTests.h \
+ ../libs/data_structures/string/tasks/appendLineWithFewerWords.h \
  ../libs/data_structures/string/tasks/countWordsPalindromes.h \
  ../libs/data_structures/string/tasks/digitToStartForTheEntireString.h \
  ../libs/data_structures/string/tasks/digitsAtTheBeginningWithChangeLettersAtTheEnd.h \

@@ -17,6 +17,7 @@
 #include "haveSameWords.h"
 #include "haveWordsMadeUpSameLetters.h"
 #include "removeRepetitionsLastWordString.h"
+#include "appendLineWithFewerWords.h"
 
 void test_tasks() {
     test_removeNonLetters();
@@ -34,6 +35,8 @@ void test_tasks() {
     test_haveSameWords();
     test_haveWordsMadeUpSameLetters();
     test_removeRepetitionsLastWordString();
+    test_appendLineWithFewerWords();
+
 }
 
 #endif //INC_1_ALLTASKTESTS_H
