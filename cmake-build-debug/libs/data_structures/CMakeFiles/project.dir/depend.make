@@ -11,9 +11,11 @@ libs/data_structures/CMakeFiles/project.dir/main.c.obj: \
  ../libs/data_structures/string/tasks/eachDigitWithItsCorrespondingNumberGaps.h \
  ../libs/data_structures/string/tasks/getLastWordFirstStringInSecond.h \
  ../libs/data_structures/string/tasks/haveSameWords.h \
+ ../libs/data_structures/string/tasks/haveWordsMadeUpSameLetters.h \
  ../libs/data_structures/string/tasks/printWordsInReverseOrder.h \
  ../libs/data_structures/string/tasks/removeExtraSpaces.h \
  ../libs/data_structures/string/tasks/removeNonLetters.h \
+ ../libs/data_structures/string/tasks/removeRepetitionsLastWordString.h \
  ../libs/data_structures/string/tasks/replace.h \
  ../libs/data_structures/string/tasks/reverseWordOrderOfAString.h \
  ../libs/data_structures/string/tasks/stringMerging.h \

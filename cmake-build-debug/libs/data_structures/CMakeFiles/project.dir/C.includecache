@@ -55,6 +55,10 @@ getLastWordFirstStringInSecond.h
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/getLastWordFirstStringInSecond.h
 haveSameWords.h
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/haveSameWords.h
+haveWordsMadeUpSameLetters.h
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/haveWordsMadeUpSameLetters.h
+removeRepetitionsLastWordString.h
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/removeRepetitionsLastWordString.h
 
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/countWordsPalindromes.h
 ../string_.h
@@ -80,6 +84,14 @@ C:/programms/5a/programms/cource/libs/data_structures/string/tasks/haveSameWords
 ../string_.h
 C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
 
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/haveWordsMadeUpSameLetters.h
+../string_.h
+C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
+haveSameWords.h
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/haveSameWords.h
+stdlib.h
+-
+
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/printWordsInReverseOrder.h
 ../string_.h
 C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
@@ -89,6 +101,10 @@ C:/programms/5a/programms/cource/libs/data_structures/string/tasks/removeExtraSp
 C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
 
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/removeNonLetters.h
+../string_.h
+C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
+
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/removeRepetitionsLastWordString.h
 ../string_.h
 C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
 

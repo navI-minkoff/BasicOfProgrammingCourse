@@ -177,6 +177,9 @@
 		<Unit filename="C:/programms/5a/programms/cource/libs/data_structures/string/tasks/haveSameWords.h">
 			<Option target="data_structures"/>
 		</Unit>
+		<Unit filename="C:/programms/5a/programms/cource/libs/data_structures/string/tasks/haveWordsMadeUpSameLetters.h">
+			<Option target="data_structures"/>
+		</Unit>
 		<Unit filename="C:/programms/5a/programms/cource/libs/data_structures/string/tasks/printWordsInReverseOrder.h">
 			<Option target="data_structures"/>
 		</Unit>
@@ -186,6 +189,9 @@
 		<Unit filename="C:/programms/5a/programms/cource/libs/data_structures/string/tasks/removeNonLetters.h">
 			<Option target="data_structures"/>
 			<Option target="str"/>
+		</Unit>
+		<Unit filename="C:/programms/5a/programms/cource/libs/data_structures/string/tasks/removeRepetitionsLastWordString.h">
+			<Option target="data_structures"/>
 		</Unit>
 		<Unit filename="C:/programms/5a/programms/cource/libs/data_structures/string/tasks/replace.h">
 			<Option target="data_structures"/>

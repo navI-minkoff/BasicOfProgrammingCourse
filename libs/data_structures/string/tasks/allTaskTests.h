@@ -15,6 +15,8 @@
 #include "wordBeforeFirstWordWithA.h"
 #include "getLastWordFirstStringInSecond.h"
 #include "haveSameWords.h"
+#include "haveWordsMadeUpSameLetters.h"
+#include "removeRepetitionsLastWordString.h"
 
 void test_tasks() {
     test_removeNonLetters();
@@ -30,7 +32,8 @@ void test_tasks() {
     testAll_getWordBeforeFirstWordWithA();
     test_getLastWordFirstStringInSecond();
     test_haveSameWords();
-
+    test_haveWordsMadeUpSameLetters();
+    test_removeRepetitionsLastWordString();
 }
 
 #endif //INC_1_ALLTASKTESTS_H
