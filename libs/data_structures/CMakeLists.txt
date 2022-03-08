@@ -4,7 +4,7 @@ add_library(data_structures
         ordered_array/ordered_array_set.c ordered_array/ordered_array_set.h
         matrix/matrix.c matrix/matrix.h string/string_.c string/string_.h
         main.c
-        string/tasks/removeNonLetters.h string/tasks/allTaskTests.h string/tasks/removeExtraSpaces.h string/tasks/digitToStartForTheEntireString.h string/tasks/digitsAtTheBeginningWithChangeLettersAtTheEnd.h string/tasks/eachDigitWithItsCorrespondingNumberGaps.h string/tasks/replace.h string/tasks/wordsAreOrderedLexicographically.h string/tasks/printWordsInReverseOrder.h string/tasks/countWordsPalindromes.h string/tasks/stringMerging.h)
+        string/tasks/removeNonLetters.h string/tasks/allTaskTests.h string/tasks/removeExtraSpaces.h string/tasks/digitToStartForTheEntireString.h string/tasks/digitsAtTheBeginningWithChangeLettersAtTheEnd.h string/tasks/eachDigitWithItsCorrespondingNumberGaps.h string/tasks/replace.h string/tasks/wordsAreOrderedLexicographically.h string/tasks/printWordsInReverseOrder.h string/tasks/countWordsPalindromes.h string/tasks/stringMerging.h string/tasks/reverseWordOrderOfAString.h)
 
 target_link_libraries(data_structures algorithms)
 

@@ -114,7 +114,8 @@
 				16,
 				17,
 				18,
-				19
+				19,
+				20
 			]
 		}
 	],
@@ -223,6 +224,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "libs/data_structures/string/tasks/stringMerging.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/data_structures/string/tasks/reverseWordOrderOfAString.h",
 			"sourceGroupIndex" : 1
 		}
 	],

@@ -11,6 +11,7 @@
 #include "printWordsInReverseOrder.h"
 #include "countWordsPalindromes.h"
 #include "stringMerging.h"
+#include "reverseWordOrderOfAString.h"
 
 void test_tasks() {
     test_removeNonLetters();
@@ -22,6 +23,8 @@ void test_tasks() {
     test_wordsAreOrderedLexicographically();
     test_countWordsPalindromes();
     test_stringMerging();
+    test_reverseWordOrderOfAString();
+
 }
 
 #endif //INC_1_ALLTASKTESTS_H
