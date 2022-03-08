@@ -4,7 +4,6 @@
 #include "../string_.h"
 
 bool isPalindrome(char *begin, char *end) {
-
     while (begin < end) {
         if (*begin != *end)
             return false;
@@ -20,7 +19,6 @@ int countWordsPalindromes(char *s) {
     int countWPalindromes = 0;
     char *endS = getEndOfString(s);
     char *commaPosition = find(s, endS, ',');
-    char *lastCommaPosition = findReverse(endS, s, ',');
     char *lastWord = findNonSpaceReverse(endS, s);
 
     char *currentPosition = findNonSpace(s);

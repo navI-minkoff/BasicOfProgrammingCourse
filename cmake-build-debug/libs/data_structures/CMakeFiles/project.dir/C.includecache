@@ -45,6 +45,8 @@ printWordsInReverseOrder.h
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/printWordsInReverseOrder.h
 countWordsPalindromes.h
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/countWordsPalindromes.h
+stringMerging.h
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/stringMerging.h
 
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/countWordsPalindromes.h
 ../string_.h
@@ -75,6 +77,10 @@ C:/programms/5a/programms/cource/libs/data_structures/string/tasks/removeNonLett
 C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
 
 C:/programms/5a/programms/cource/libs/data_structures/string/tasks/replace.h
+../string_.h
+C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
+
+C:/programms/5a/programms/cource/libs/data_structures/string/tasks/stringMerging.h
 ../string_.h
 C:/programms/5a/programms/cource/libs/data_structures/string/string_.h
 

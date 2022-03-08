@@ -13,4 +13,5 @@ libs/data_structures/CMakeFiles/project.dir/main.c.obj: \
  ../libs/data_structures/string/tasks/removeExtraSpaces.h \
  ../libs/data_structures/string/tasks/removeNonLetters.h \
  ../libs/data_structures/string/tasks/replace.h \
+ ../libs/data_structures/string/tasks/stringMerging.h \
  ../libs/data_structures/string/tasks/wordsAreOrderedLexicographically.h

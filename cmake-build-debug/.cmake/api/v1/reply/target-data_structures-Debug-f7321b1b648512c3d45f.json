@@ -113,7 +113,8 @@
 				15,
 				16,
 				17,
-				18
+				18,
+				19
 			]
 		}
 	],
@@ -217,6 +218,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "libs/data_structures/string/tasks/countWordsPalindromes.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "libs/data_structures/string/tasks/stringMerging.h",
 			"sourceGroupIndex" : 1
 		}
 	],
