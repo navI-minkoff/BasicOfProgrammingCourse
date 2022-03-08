@@ -14,6 +14,7 @@
 #include "reverseWordOrderOfAString.h"
 #include "wordBeforeFirstWordWithA.h"
 #include "getLastWordFirstStringInSecond.h"
+#include "haveSameWords.h"
 
 void test_tasks() {
     test_removeNonLetters();
@@ -21,13 +22,14 @@ void test_tasks() {
     test_digitsBeginningChangeLettersEndForTheEntireString();
     test_digitsAtTheEndForTheEntireString();
     test_eachDigitWithItsCorrespondingNumberGaps();
-    test_replace();
+//    test_replace();
     test_wordsAreOrderedLexicographically();
     test_countWordsPalindromes();
     test_stringMerging();
 //    test_reverseWordOrderOfAString();
     testAll_getWordBeforeFirstWordWithA();
     test_getLastWordFirstStringInSecond();
+    test_haveSameWords();
 
 }
 

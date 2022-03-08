@@ -22,7 +22,7 @@ void replace(char *source, char *w1, char *w2) {
 
     while (*readPtr != '\0') {
         if (*readPtr == *word1.begin) {
-            if (areWordsEqual(word1, (WordDescriptor) {readPtr, readPtr + w1Size}) <= 0) {
+            if (areWordsEqual(word1, (WordDescriptor) {readPtr, readPtr + w1Size}) < 0) {
                 copy(word2.begin, word2.end, recPtr);
                 readPtr += w1Size;
                 recPtr += w2Size;
