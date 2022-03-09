@@ -43,9 +43,9 @@ void test_hasEqualWords_empty() {
 void test_haveSameWords() {
     test_hasEqualWords_hasEqualWords();
     test_hasEqualWords_LettersHasEqualWords();
-//    test_hasEqualWords_hasNotEqualWords();
+    test_hasEqualWords_hasNotEqualWords();
     test_hasEqualWords_oneWord();
-//    test_hasEqualWords_empty();
+    test_hasEqualWords_empty();
 }
 
 #endif

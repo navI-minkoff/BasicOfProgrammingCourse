@@ -67,9 +67,9 @@ void test_getLastWordInFirstStringInTheSecondString_emptyStrings() {
 }
 
 void test_getLastWordFirstStringInSecond() {
-//    test_getLastWordInFirstStringInTheSecondString_hasWordInStrings();
+    test_getLastWordInFirstStringInTheSecondString_hasWordInStrings();
     test_getLastWordInFirstStringInTheSecondString_hasOneWordInStrings();
-//    test_getLastWordInFirstStringInTheSecondString_hasNotUnion();
+    test_getLastWordInFirstStringInTheSecondString_hasNotUnion();
     test_getLastWordInFirstStringInTheSecondString_emptyStrings();
 }
 #endif

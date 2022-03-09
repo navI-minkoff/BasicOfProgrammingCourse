@@ -51,10 +51,10 @@ void test_areWordsFromSameLetters_differentRegisters() {
 }
 
 void test_haveWordsMadeUpSameLetters() {
-//    test_areWordsFromSameLetters_hasThisWords();
-//    test_areWordsFromSameLetters_hasNotThisWords();
-//    test_areWordsFromSameLetters_hasThisWords2();
-//    test_areWordsFromSameLetters_empty();
+    test_areWordsFromSameLetters_hasThisWords();
+    test_areWordsFromSameLetters_hasNotThisWords();
+    test_areWordsFromSameLetters_hasThisWords2();
+    test_areWordsFromSameLetters_empty();
     test_areWordsFromSameLetters_oneWord();
     test_areWordsFromSameLetters_differentRegisters();
 }

@@ -28,19 +28,19 @@ void removeRepetitionsLastWordString(char *s) {
 void test_deleteMatchesWithTheLastWord_someLastWords() {
     char s[] = "Hello World Hello Hello Book Hello";
     removeRepetitionsLastWordString(s);
-//    ASSERT_STRING("World Book", s);
+    ASSERT_STRING("World Book", s);
 }
 
 void test_deleteMatchesWithTheLastWord_moreEqualWords() {
     char s[] = "Hello Hello Hello Hello";
     removeRepetitionsLastWordString(s);
-//    ASSERT_STRING("", s);
+    ASSERT_STRING("", s);
 }
 
 void test_deleteMatchesWithTheLastWord_oneWord() {
     char s[] = "Hello";
     removeRepetitionsLastWordString(s);
-//    ASSERT_STRING("", s);
+    ASSERT_STRING("", s);
 }
 
 void test_deleteMatchesWithTheLastWord_empty() {
